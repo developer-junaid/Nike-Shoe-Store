@@ -1,38 +1,99 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merienda One", cursive;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+/* Main Container */
+.container {
+  width: 100%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* NAV */
+.nav-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 4px gray;
+
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  font-variant: small-caps;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo {
+  height: 100px;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid black;
+}
+
+.active {
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+  font-variant: small-caps;
+}
+
+
+
+
+/* Product */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.products {
+  margin: 10px 0px;
+  text-decoration: none;
+  padding: 10px 0;
+  box-shadow: 5px 2px 6px gray;
+  width: 400px;
+  height: 350px;
+}
+
+.shoe-name{
+  color: #5d0137;
+
+}
+
+.shoe-price{
+  color: rgb(96, 110, 96);
+
+}
+/* Product Items */
+.product-items {
+  margin: 10px auto;
+  padding: 10px 0;
+  color: #5d0137;
+
+  width: 800px;
+  height: 600px;
 }
