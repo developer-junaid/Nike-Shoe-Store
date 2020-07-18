@@ -17,7 +17,7 @@ function ProductItems() {
       <div className="product-items">
       <h3 className="shoe-name">{shoe.name}</h3>
               <h2 className="shoe-price"> Price = {shoe.price} </h2>
-             <a href={shoe.img2}> <img alt="Shoe" src={shoe.img2} height={500} /> </a>
+             <a href={shoe.img2}> <img className='shoe-image' alt="Shoe" src={shoe.img2} /> </a>
       </div>
     </div>
   );
