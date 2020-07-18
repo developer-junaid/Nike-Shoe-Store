@@ -31,14 +31,13 @@ body {
   font-family: "Acme", sans-serif;
   font-size: 70px;
   color: #6f2f40;
-  margin-top: 20px;
-  text-shadow: 2px 4px 2px #5d0137 ;
-
+  margin-top: 50px;
+  text-shadow: 2px 4px 2px #5d0137;
 }
 
 .tagline-para {
   display: flex;
-  width: 700px;
+  width: 50%;
   text-align: center;
   margin: 0 auto;
   justify-content: center;
@@ -47,10 +46,157 @@ body {
   color: #948989;
 }
 
+@media (max-width: 700px){
+  .tagline{
+    font-size: 50px;
+  }
+
+  .tagline-para{
+    font-size: 20px;
+  }
+}
+
+
+.about-button {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: white;
+  background: #5d0137;
+  margin: 15px;
+  font-size: 22px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+
+@media (max-width: 700px){
+  .about-button{
+    font-size: 18px;
+
+  }
+}
+
+ /* Button hover effects */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+}
+
+/** Latest designs Home **/
+.latest-designs{
+  font-size: 20px;
+  text-shadow:1px 1px 2px #5d0137;
+}
+
+.latest-container{
+  margin: 10px;
+}
+
+.line{
+  display: inline-block;
+  width: 20%;
+}
+
+@media (max-width:450px){
+  .line{
+    width:10%;
+  }
+
+  .latest-designs{
+    font-size: 18px;}
+
+    .tagline-para{
+      font-size: 14px;
+    }
+
+    .tagline{
+      font-size: 40px;
+    }
+
+    .about-button{
+      font-size: 12px;
+    }
+
+    .banner-image{
+      height: 50vh;
+    }
+}
+
+@media (max-width:800px){
+  .banner-image{
+    height: 50vh;
+  }
+}
+
+.image-gallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-products {
+  margin: 10px 10px;
+  text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 2px 2px 2px gray;
+  width: 270px;
+  height: 250px;
+}
+
+/* NAV HOVER EFFECT */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #5d0137;
+  height: 3px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
 /* NAV */
 .nike-shoes {
   margin: 20px;
-  text-shadow: 2px 4px 8px #5d0137 ;
+  text-shadow: 2px 4px 8px #5d0137;
   font-variant: small-caps;
   font-size: 40px;
   color: #500619;
@@ -100,10 +246,6 @@ body {
   }
 }
 
-.nav-link:hover {
-  border-bottom: 3px solid #6f2f40;
-}
-
 .active {
   text-decoration: none;
   color: black;
@@ -120,16 +262,18 @@ body {
 }
 
 .products {
-  margin: 10px 4px;
+  margin: 10px 10px;
   text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 20px;
   padding: 10px 0;
   box-shadow: 8px 8px 8px gray;
-  width: 350px;
-  height: 300px;
+  width: 300px;
+  height: 250px;
 }
 
 .products-shoe-image {
-  height: 200px;
+  height: 150px;
 }
 
 @media (max-width: 500px) {
@@ -149,6 +293,7 @@ body {
 
 .shoe-price {
   color: rgb(96, 110, 96);
+  text-shadow: 1px 1px 1px black;
 }
 /* Product Items */
 .product-items {
