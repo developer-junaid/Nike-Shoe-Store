@@ -36,15 +36,18 @@ function Nav() {
 
 
   return (
-    <div className="nav-container">
-      <nav>
-        <h2>
-          <img className='logo' src={NikeImage} alt="Nike Logo" />
-          <Link className={homeState}  to="/" onClick={ setHome }> Home </Link>
-          <Link className={aboutState} to="/about" onClick={ setAbout}> About </Link>
-          <Link className={productState} to="/product" onClick={ setProduct }> Products </Link>
-        </h2>
-      </nav>
+    <div>
+      <h1 className='nike-shoes'>Nike Shoes</h1>
+      <div className="nav-container">
+        <nav>
+          <h2>
+            <img className='logo' src={NikeImage} alt="Nike Logo" />
+            <Link className={homeState}  to="/" onClick={ setHome }> Home </Link>
+            <Link className={aboutState} to="/about" onClick={ setAbout}> About </Link>
+            <Link className={productState} to="/product" onClick={ setProduct }> Products </Link>
+          </h2>
+        </nav>
+      </div>
     </div>
   );
 }

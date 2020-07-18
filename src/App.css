@@ -1,30 +1,35 @@
 * {
-  margin: 0;
+  margin: 0 4px;
   padding: 0;
   box-sizing: border-box;
   font-family: "Merienda One", cursive;
 }
 
-body,
-html {
-  height: 100%;
-  width: 100%;
+body{
+  background: #fdf7f7;
 }
+
 /* Main Container */
 .container {
   width: 100%;
   text-align: center;
 }
+
+.nike-shoes {
+  margin: 20px;
+  font-variant: small-caps;
+  color: #5d0137;
+}
+
 /* NAV */
 .nav-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 10px;
-  padding: 20px;
+  margin: 18px 10px;
+  padding: 10px;
   margin-bottom: 40px;
   box-shadow: 1px 1px 4px gray;
-
 }
 
 .nav-link {
@@ -38,8 +43,8 @@ html {
 .logo {
   height: 100px;
   position: absolute;
-  left: 30px;
-  top: 0px;
+  left: 40px;
+  top: 62px;
 }
 
 @media (max-width: 800px) {
@@ -48,19 +53,29 @@ html {
   }
 }
 
+@media (max-width: 500px) {
+  .nav-container {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 375px) {
+  .nav-link {
+    margin: 10px 0;
+    padding: 10px 2;
+  }
+}
+
 .nav-link:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #5d0137;
 }
 
 .active {
   text-decoration: none;
   color: black;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #5d0137;
   font-variant: small-caps;
 }
-
-
-
 
 /* Product */
 .product-container {
@@ -71,29 +86,149 @@ html {
 }
 
 .products {
-  margin: 10px 0px;
+  margin: 10px 4px;
   text-decoration: none;
   padding: 10px 0;
-  box-shadow: 5px 2px 6px gray;
-  width: 400px;
-  height: 350px;
+  box-shadow: 8px 8px 8px gray;
+  width: 350px;
+  height: 300px;
 }
 
-.shoe-name{
+.products-shoe-image {
+  height: 200px;
+}
+
+@media (max-width: 500px) {
+  .products {
+    width: 300px;
+    height: 250px;
+  }
+
+  .products-shoe-image {
+    height: 150px;
+  }
+}
+
+.shoe-name {
   color: #5d0137;
-
 }
 
-.shoe-price{
+.shoe-price {
   color: rgb(96, 110, 96);
-
 }
 /* Product Items */
 .product-items {
   margin: 10px auto;
   padding: 10px 0;
   color: #5d0137;
+  width: 80%;
+  height: auto;
+}
 
-  width: 800px;
-  height: 600px;
+.shoe-image {
+  width: 80%;
+  height: auto;
+}
+
+/* Footer container */
+.page-wrapper {
+  height: 130px;
+}
+/* FOOTER */
+.footer-container {
+  width: 100%;
+  margin-top: 180px;
+}
+
+/* FOOTER */
+.footer {
+  color: black;
+  height: 100px;
+  position: relative;
+}
+
+.footer .footer-content {
+  height: 100px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer .footer-content h1 {
+  color: black;
+}
+
+.footer-para {
+  margin: 10px 0;
+  font-variant: small-caps;
+  font-size: x-large;
+}
+
+.my-name {
+  color: #5e1e37;
+}
+
+.footer .footer-content .about .contact span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  height: 38px;
+  padding-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #706060;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+  color: rgb(30, 30, 150);
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.logo-text {
+  font-variant: initial;
+}
+
+.logo-text .logo-span {
+  color: #ec4961;
+}
+
+@media (max-width: 500px) {
+  .footer-para {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-para {
+    font-size: 15px;
+  }
+
+  .footer .footer-content .about .socials a {
+    width: 30px;
+    height: 38px;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+
+    font-size: 1.3em;
+  }
 }
