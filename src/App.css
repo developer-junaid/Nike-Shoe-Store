@@ -5,8 +5,8 @@
   font-family: "Merienda One", cursive;
 }
 
-body{
-  background: #fdf7f7;
+body {
+  background: #ffffff;
 }
 
 /* Main Container */
@@ -15,13 +15,47 @@ body{
   text-align: center;
 }
 
-.nike-shoes {
-  margin: 20px;
-  font-variant: small-caps;
-  color: #5d0137;
+/* HOME */
+.banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./images/nike2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.tagline {
+  display: block;
+  font-family: "Acme", sans-serif;
+  font-size: 70px;
+  color: #6f2f40;
+  margin-top: 20px;
+  text-shadow: 2px 4px 2px #5d0137 ;
+
+}
+
+.tagline-para {
+  display: flex;
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
+  color: #948989;
 }
 
 /* NAV */
+.nike-shoes {
+  margin: 20px;
+  text-shadow: 2px 4px 8px #5d0137 ;
+  font-variant: small-caps;
+  font-size: 40px;
+  color: #500619;
+}
+
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -44,7 +78,7 @@ body{
   height: 100px;
   position: absolute;
   left: 40px;
-  top: 62px;
+  top: 74px;
 }
 
 @media (max-width: 800px) {
@@ -67,13 +101,13 @@ body{
 }
 
 .nav-link:hover {
-  border-bottom: 3px solid #5d0137;
+  border-bottom: 3px solid #6f2f40;
 }
 
 .active {
   text-decoration: none;
   color: black;
-  border-bottom: 3px solid #5d0137;
+  border-bottom: 3px solid #6f2f40;
   font-variant: small-caps;
 }
 
