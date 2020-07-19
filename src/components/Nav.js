@@ -6,30 +6,30 @@ import NikeImage from '../images/nike.svg'
 function Nav() {
 
   // Use state
-  const [homeState, setHomeState] = useState('nav-link active')
-  const [aboutState, setAboutState] = useState('nav-link')
-  const [productState, setProductState] = useState('nav-link')
+  const [homeState, setHomeState] = useState('hvr-underline-from-center nav-link active')
+  const [aboutState, setAboutState] = useState('hvr-underline-from-center nav-link')
+  const [productState, setProductState] = useState('hvr-underline-from-center nav-link')
 
   // Functions 
     // Home
     const setHome = ()=> {
-      setHomeState('nav-link active');
-      setAboutState('nav-link');
-      setProductState('nav-link');
+      setHomeState('hvr-underline-from-center nav-link active');
+      setAboutState('hvr-underline-from-center nav-link');
+      setProductState('hvr-underline-from-center nav-link');
     }
 
     // About
     const setAbout = ()=> {
-      setHomeState('nav-link');
-      setAboutState('nav-link active');
-      setProductState('nav-link');
+      setHomeState('hvr-underline-from-center nav-link');
+      setAboutState('hvr-underline-from-center nav-link active');
+      setProductState('hvr-underline-from-center nav-link');
     }
     
     // Product
     const setProduct = ()=> {
-      setHomeState('nav-link');
-      setAboutState('nav-link');
-      setProductState('nav-link active');
+      setHomeState('hvr-underline-from-center nav-link');
+      setAboutState('hvr-underline-from-center nav-link');
+      setProductState('hvr-underline-from-center nav-link active');
     }
 
 

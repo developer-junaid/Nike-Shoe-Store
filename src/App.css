@@ -15,42 +15,52 @@ body {
   text-align: center;
 }
 
-/* HOME */
-.banner-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./images/nike2.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  border-radius: 20px;
-  box-shadow: 10px 10px 10px gray;
-}
 
-.tagline {
-  display: block;
-  font-family: "Acme", sans-serif;
-  font-size: 70px;
-  color: #6f2f40;
-  margin-top: 20px;
-  text-shadow: 2px 4px 2px #5d0137 ;
-
-}
-
-.tagline-para {
-  display: flex;
-  width: 700px;
-  text-align: center;
-  margin: 0 auto;
-  justify-content: center;
-  font-family: "Karla", sans-serif;
-  font-size: 25px;
-  color: #948989;
-}
 
 /* NAV */
+
+
+
+
+
+/* NAV HOVER EFFECT */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #5d0137;
+  height: 3px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+
 .nike-shoes {
   margin: 20px;
-  text-shadow: 2px 4px 8px #5d0137 ;
+  text-shadow: 2px 4px 8px #5d0137;
   font-variant: small-caps;
   font-size: 40px;
   color: #500619;
@@ -60,9 +70,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 18px 10px;
-  padding: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   box-shadow: 1px 1px 4px gray;
 }
 
@@ -78,8 +86,21 @@ body {
   height: 100px;
   position: absolute;
   left: 40px;
-  top: 74px;
+  top: 90px;
 }
+
+
+.active {
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid #6f2f40;
+  font-variant: small-caps;
+}
+
+
+
+
+/* MEDIA QUERIES */
 
 @media (max-width: 800px) {
   .logo {
@@ -100,18 +121,422 @@ body {
   }
 }
 
-.nav-link:hover {
-  border-bottom: 3px solid #6f2f40;
+
+
+
+
+
+
+
+
+
+/* HOME */
+
+
+
+
+
+.banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./images/nike2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px gray;
 }
 
-.active {
-  text-decoration: none;
-  color: black;
-  border-bottom: 3px solid #6f2f40;
-  font-variant: small-caps;
+.tagline {
+  display: block;
+  font-family: "Acme", sans-serif;
+  font-size: 70px;
+  color: #6f2f40;
+  margin-top: 50px;
+  text-shadow: 2px 4px 2px #5d0137;
 }
+
+.tagline-para {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
+  color: #948989;
+}
+
+
+.about-button {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: white;
+  background: #5d0137;
+  margin: 15px;
+  font-size: 22px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+
+
+
+
+/* Button hover effects */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+}
+
+/** Latest designs Home **/
+.latest-designs {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #5d0137;
+}
+
+.latest-container {
+  margin: 10px;
+}
+
+.line {
+  display: inline-block;
+  width: 20%;
+}
+
+
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-products {
+  margin: 10px 10px;
+  text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 2px 2px 2px gray;
+  width: 270px;
+  height: 250px;
+}
+
+
+  /* MEDIA QUERIES */
+
+
+  @media (max-width: 1000px) {
+    .banner-image {
+      height: 50vh;
+    }
+  }
+
+@media (max-width: 800px) {
+  .banner-image {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-products {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .tagline {
+    font-size: 50px;
+  }
+
+  .tagline-para {
+    font-size: 20px;
+  }
+  
+  .about-button {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .line {
+    width: 10%;
+  }
+
+  .latest-designs {
+    font-size: 18px;
+  }
+
+  .tagline-para {
+    font-size: 14px;
+  }
+
+  .tagline {
+    font-size: 40px;
+  }
+
+  .about-button {
+    font-size: 12px;
+  }
+
+  .banner-image {
+    height: 40vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* About */
+
+.banner-image-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/nike1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+
+
+.about-nike{
+  margin-right: 60%;
+  padding: 20px;
+  padding-top: 230px;
+  
+}
+
+.about-nike-text{
+  font-size: 25px;
+  color: black;
+  font-family: 'Rowdies', cursive;
+  text-shadow: 4px 4px 1px #1e80d4;
+}
+
+.about-nike > p{
+  margin: 20px;
+  font-family: 'Rowdies', cursive;
+  font-size: 22px;
+  color: black;
+  text-shadow: 1px 1px 1px rgb(27, 77, 124);
+}
+
+.about-nike-part{
+  margin: 40px;
+  padding: 40px;
+}
+
+.about-nike-heading{
+  font-family: 'Rowdies', cursive;
+  margin: 20px;
+  font-size: 40px;
+  text-shadow: 4px 2px 1px black;
+  color: #5fa5ff;
+  font-variant: small-caps;
+  
+}
+
+.about-nike-para{
+  font-family: 'Rowdies', cursive;
+  padding: 0px;
+  text-shadow: 1px 1px 1px gray;
+  justify-content: center;
+  font-size: 25px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px){
+
+  .about-nike{
+    padding-top: 400px;
+  }
+
+  .about-nike-text{
+    font-size: 20px;
+  }
+
+  .about-nike > p{
+    font-size: 14px;
+  }
+
+  .about-nike-heading{
+    font-size: 30px;
+  }
+
+  .about-nike-part{
+    margin: 2px;
+    
+  }
+
+  .about-nike-para{
+    font-size: 15px;
+  }
+
+}
+
+
+@media (max-width:900px){
+
+  .banner-image-about{
+    height: 50vh;
+  }
+
+  .about-nike{
+    padding-top: 90px;
+  }
+  
+  .about-nike-heading{
+    padding: 0;
+  }
+  
+  .about-nike-part{
+    padding: 2px;
+  }
+
+  .about-nike > p{
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width:750px){
+
+  .banner-image-about{
+    height: 40vh;
+  }
+
+  .about-nike{
+    padding-top: 90px;
+  }
+  
+  .about-nike-heading{
+    padding: 0;
+  }
+  
+  .about-nike-part{
+    padding: 2px;
+  }
+
+  .about-nike > p{
+    font-size: 11px;
+  }
+}
+
+
+
+
+@media (max-width:600px){
+
+  .about-nike{
+    padding-top: 120px;
+  }
+  
+  .about-nike > p{
+    font-size: 8px;
+  }
+}
+
+
+
+@media (max-width:500px){
+
+  .about-nike-text{
+    font-size: 13px;
+  }
+
+  .about-nike-heading{
+    font-size: 25px;
+  }
+
+  .about-nike-para{
+    font-size: 12px;
+  }
+
+  .about-nike{
+    padding-top: 100px;
+  }
+  
+  .about-nike > p{
+    font-size: 7px;
+  }
+}
+
+
+@media (max-width:400px){
+
+  .about-nike-text{
+    font-size: 11px;
+    padding: 0;
+    margin:0;
+  }
+
+  .about-nike-heading{
+    font-size: 23px;
+    padding:0 ;
+  }
+
+  .about-nike-para{
+    font-size: 10px;
+  }
+
+  .about-nike{
+    padding-top: 100px;
+  }
+  
+  .about-nike > p{
+    padding: 0;
+    margin:1;
+    font-size: 5px;
+  }
+
+  .about-nike{
+    padding: 0;
+    padding-top: 150px;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 /* Product */
+
+
+
 .product-container {
   display: flex;
   flex-wrap: wrap;
@@ -120,28 +545,20 @@ body {
 }
 
 .products {
-  margin: 10px 4px;
+  margin: 10px 10px;
   text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 20px;
   padding: 10px 0;
-  box-shadow: 8px 8px 8px gray;
-  width: 350px;
-  height: 300px;
+  box-shadow: 8px 8px 8px #481444;
+  width: 300px;
+  height: 250px;
 }
 
 .products-shoe-image {
-  height: 200px;
+  height: 150px;
 }
 
-@media (max-width: 500px) {
-  .products {
-    width: 300px;
-    height: 250px;
-  }
-
-  .products-shoe-image {
-    height: 150px;
-  }
-}
 
 .shoe-name {
   color: #5d0137;
@@ -149,6 +566,7 @@ body {
 
 .shoe-price {
   color: rgb(96, 110, 96);
+  text-shadow: 1px 1px 1px black;
 }
 /* Product Items */
 .product-items {
@@ -164,17 +582,55 @@ body {
   height: auto;
 }
 
-/* Footer container */
-.page-wrapper {
-  height: 130px;
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+  .products {
+    width: 300px;
+    height: 250px;
+  }
+
+  .products-shoe-image {
+    height: 150px;
+  }
 }
+
+@media (max-width: 700px) {
+  .products {
+    width: 200px;
+    height: 150px;
+  }
+
+  .products-shoe-image {
+    height: 80px;
+  }
+
+  .shoe-name {
+    font-size: 12px;
+  }
+
+  .shoe-price {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+/* FOOTER */
+
+
+
+/* Footer container */
+
 /* FOOTER */
 .footer-container {
   width: 100%;
   margin-top: 180px;
 }
 
-/* FOOTER */
+
 .footer {
   color: black;
   height: 100px;
@@ -245,15 +701,44 @@ body {
   color: #ec4961;
 }
 
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width: 700px) {
+  .footer-container {
+    font-size: 20px;
+  }
+
+  .footer-para {
+    font-size: 20px;
+  }
+  .my-name {
+    font-size: 20px;
+  }
+
+  .socials {
+    font-size: 16px;
+  }
+}
+
+
 @media (max-width: 500px) {
   .footer-para {
     font-size: 20px;
   }
 }
 
+
+
 @media (max-width: 350px) {
   .footer-para {
-    font-size: 15px;
+    font-size: 15px !important;
+  }
+
+  .my-name{
+    font-size: 15px !important;
   }
 
   .footer .footer-content .about .socials a {
@@ -262,7 +747,9 @@ body {
     padding-top: 5px;
     margin-right: 5px;
     margin-bottom: 20px;
-
     font-size: 1.3em;
   }
 }
+
+
+

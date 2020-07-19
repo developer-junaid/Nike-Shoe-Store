@@ -10,7 +10,7 @@ function Product() {
         {Object.keys(Shoes).map((keyName) => {
           const shoe = Shoes[keyName];
           return (
-            <Link className="products" key={keyName} to={`/product/${keyName}`}>
+            <Link  className="hvr-grow products" key={keyName} to={`/product/${keyName}`}>
               <img className='products-shoe-image' alt="Shoe" src={shoe.img}  />
               <h3 className="shoe-name">{shoe.name}</h3>
               <h2 className="shoe-price"> {shoe.price} </h2>
