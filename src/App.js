@@ -3,13 +3,15 @@ import RouterFunction from "./Router";
 import Footer from "./components/Footer";
 
 import "./App.css";
+import { CartProvider } from "./CartContext";
 
 function App() {
   return (
     <div className="container">
-      <RouterFunction />
-      
-      <Footer />
+      <CartProvider>
+        <RouterFunction />
+        <Footer />
+      </CartProvider>
     </div>
   );
 }

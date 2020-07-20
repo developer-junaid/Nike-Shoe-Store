@@ -5,6 +5,7 @@ import Product from "./components/Product";
 import ProductItems from "./components/ProductItems";
 import About from "./components/About";
 import Nav from "./components/Nav";
+import Cart from "./components/Cart";
 
 function RouterFunction() {
   return (
@@ -15,6 +16,7 @@ function RouterFunction() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route exact path="/product" component={Product} />
+          <Route path="/cart" component={Cart} />
           <Route path="/product/:id" component={ProductItems} />
           <Route path="*" component={() => <h2>404 Not Found </h2>} />
         </Switch>

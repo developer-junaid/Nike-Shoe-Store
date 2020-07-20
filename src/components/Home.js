@@ -30,6 +30,7 @@ function Home() {
             <Link  className="home-products" key={keyName} to={`/product/${keyName}`}>
               <img className='products-shoe-image' alt="Shoe" src={shoe.img}  />
               <h3 className="shoe-name">{shoe.name}</h3>
+              <h3 className="shoe-price">${shoe.price}</h3>
             </Link>
           );
         })}

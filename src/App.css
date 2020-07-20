@@ -15,13 +15,7 @@ body {
   text-align: center;
 }
 
-
-
 /* NAV */
-
-
-
-
 
 /* NAV HOVER EFFECT */
 .hvr-underline-from-center {
@@ -56,8 +50,6 @@ body {
   right: 0;
 }
 
-
-
 .nike-shoes {
   margin: 20px;
   text-shadow: 2px 4px 8px #5d0137;
@@ -89,16 +81,12 @@ body {
   top: 90px;
 }
 
-
 .active {
   text-decoration: none;
   color: black;
   border-bottom: 3px solid #6f2f40;
   font-variant: small-caps;
 }
-
-
-
 
 /* MEDIA QUERIES */
 
@@ -121,20 +109,7 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
 /* HOME */
-
-
-
-
 
 .banner-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -166,7 +141,6 @@ body {
   color: #948989;
 }
 
-
 .about-button {
   display: inline-block;
   text-decoration: none;
@@ -182,9 +156,6 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   cursor: pointer;
 }
-
-
-
 
 /* Button hover effects */
 .hvr-grow {
@@ -219,8 +190,6 @@ body {
   width: 20%;
 }
 
-
-
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -237,15 +206,13 @@ body {
   height: 250px;
 }
 
+/* MEDIA QUERIES */
 
-  /* MEDIA QUERIES */
-
-
-  @media (max-width: 1000px) {
-    .banner-image {
-      height: 50vh;
-    }
+@media (max-width: 1000px) {
+  .banner-image {
+    height: 50vh;
   }
+}
 
 @media (max-width: 800px) {
   .banner-image {
@@ -258,7 +225,7 @@ body {
     width: 200px;
     height: 150px;
   }
-  
+
   .tagline {
     font-size: 50px;
   }
@@ -266,12 +233,11 @@ body {
   .tagline-para {
     font-size: 20px;
   }
-  
+
   .about-button {
     font-size: 18px;
   }
 }
-
 
 @media (max-width: 500px) {
   .line {
@@ -299,17 +265,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* About */
 
 .banner-image-about {
@@ -323,219 +278,186 @@ body {
   box-shadow: 10px 10px 10px gray;
 }
 
-
-
-.about-nike{
+.about-nike {
   margin-right: 60%;
   padding: 20px;
   padding-top: 230px;
-  
 }
 
-.about-nike-text{
+.about-nike-text {
   font-size: 25px;
   color: black;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   text-shadow: 4px 4px 1px #1e80d4;
 }
 
-.about-nike > p{
+.about-nike > p {
   margin: 20px;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   font-size: 22px;
   color: black;
   text-shadow: 1px 1px 1px rgb(27, 77, 124);
 }
 
-.about-nike-part{
+.about-nike-part {
   margin: 40px;
   padding: 40px;
 }
 
-.about-nike-heading{
-  font-family: 'Rowdies', cursive;
+.about-nike-heading {
+  font-family: "Rowdies", cursive;
   margin: 20px;
   font-size: 40px;
   text-shadow: 4px 2px 1px black;
   color: #5fa5ff;
   font-variant: small-caps;
-  
 }
 
-.about-nike-para{
-  font-family: 'Rowdies', cursive;
+.about-nike-para {
+  font-family: "Rowdies", cursive;
   padding: 0px;
   text-shadow: 1px 1px 1px gray;
   justify-content: center;
   font-size: 25px;
 }
 
-
-
 /* MEDIA QUERIES */
 
-@media (max-width: 1000px){
-
-  .about-nike{
+@media (max-width: 1000px) {
+  .about-nike {
     padding-top: 400px;
   }
 
-  .about-nike-text{
+  .about-nike-text {
     font-size: 20px;
   }
 
-  .about-nike > p{
+  .about-nike > p {
     font-size: 14px;
   }
 
-  .about-nike-heading{
+  .about-nike-heading {
     font-size: 30px;
   }
 
-  .about-nike-part{
+  .about-nike-part {
     margin: 2px;
-    
   }
 
-  .about-nike-para{
+  .about-nike-para {
     font-size: 15px;
   }
-
 }
 
-
-@media (max-width:900px){
-
-  .banner-image-about{
+@media (max-width: 900px) {
+  .banner-image-about {
     height: 50vh;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 90px;
   }
-  
-  .about-nike-heading{
+
+  .about-nike-heading {
     padding: 0;
   }
-  
-  .about-nike-part{
+
+  .about-nike-part {
     padding: 2px;
   }
 
-  .about-nike > p{
+  .about-nike > p {
     font-size: 11px;
   }
 }
 
-
-@media (max-width:750px){
-
-  .banner-image-about{
+@media (max-width: 750px) {
+  .banner-image-about {
     height: 40vh;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 90px;
   }
-  
-  .about-nike-heading{
+
+  .about-nike-heading {
     padding: 0;
   }
-  
-  .about-nike-part{
+
+  .about-nike-part {
     padding: 2px;
   }
 
-  .about-nike > p{
+  .about-nike > p {
     font-size: 11px;
   }
 }
 
-
-
-
-@media (max-width:600px){
-
-  .about-nike{
+@media (max-width: 600px) {
+  .about-nike {
     padding-top: 120px;
   }
-  
-  .about-nike > p{
+
+  .about-nike > p {
     font-size: 8px;
   }
 }
 
-
-
-@media (max-width:500px){
-
-  .about-nike-text{
+@media (max-width: 500px) {
+  .about-nike-text {
     font-size: 13px;
   }
 
-  .about-nike-heading{
+  .about-nike-heading {
     font-size: 25px;
   }
 
-  .about-nike-para{
+  .about-nike-para {
     font-size: 12px;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 100px;
   }
-  
-  .about-nike > p{
+
+  .about-nike > p {
     font-size: 7px;
   }
 }
 
-
-@media (max-width:400px){
-
-  .about-nike-text{
+@media (max-width: 400px) {
+  .about-nike-text {
     font-size: 11px;
     padding: 0;
-    margin:0;
+    margin: 0;
   }
 
-  .about-nike-heading{
+  .about-nike-heading {
     font-size: 23px;
-    padding:0 ;
+    padding: 0;
   }
 
-  .about-nike-para{
+  .about-nike-para {
     font-size: 10px;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 100px;
   }
-  
-  .about-nike > p{
+
+  .about-nike > p {
     padding: 0;
-    margin:1;
+    margin: 1;
     font-size: 5px;
   }
 
-  .about-nike{
+  .about-nike {
     padding: 0;
     padding-top: 150px;
   }
-
 }
 
-
-
-
-
-
-
-
-
 /* Product */
-
-
 
 .product-container {
   display: flex;
@@ -551,14 +473,13 @@ body {
   border-radius: 20px;
   padding: 10px 0;
   box-shadow: 8px 8px 8px #481444;
-  width: 300px;
-  height: 250px;
+  width: 350px;
+  height: 300px;
 }
 
 .products-shoe-image {
   height: 150px;
 }
-
 
 .shoe-name {
   color: #5d0137;
@@ -582,6 +503,19 @@ body {
   height: auto;
 }
 
+.cart-image {
+  height: 30px;
+}
+
+.cart-button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #efd2d2;
+  cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 500px) {
@@ -596,9 +530,13 @@ body {
 }
 
 @media (max-width: 700px) {
+  .cart-image {
+    height: 20px;
+  }
+
   .products {
     width: 200px;
-    height: 150px;
+    height: 180px;
   }
 
   .products-shoe-image {
@@ -614,13 +552,7 @@ body {
   }
 }
 
-
-
-
-
 /* FOOTER */
-
-
 
 /* Footer container */
 
@@ -629,7 +561,6 @@ body {
   width: 100%;
   margin-top: 180px;
 }
-
 
 .footer {
   color: black;
@@ -701,10 +632,7 @@ body {
   color: #ec4961;
 }
 
-
-
 /* MEDIA QUERIES */
-
 
 @media (max-width: 700px) {
   .footer-container {
@@ -723,21 +651,18 @@ body {
   }
 }
 
-
 @media (max-width: 500px) {
   .footer-para {
     font-size: 20px;
   }
 }
 
-
-
 @media (max-width: 350px) {
   .footer-para {
     font-size: 15px !important;
   }
 
-  .my-name{
+  .my-name {
     font-size: 15px !important;
   }
 
@@ -750,6 +675,3 @@ body {
     font-size: 1.3em;
   }
 }
-
-
-
