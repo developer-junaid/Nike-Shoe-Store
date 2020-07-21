@@ -10,9 +10,19 @@ function Cart() {
   const total = Number(totalPrice).toFixed(2);
 
   return (
-    <div className="cart-container">
+    <div>
       <SummaryCard items={cart.length} amount={total} />
-     
+      <hr/>
+      <h3 className='your-products'>Your Products</h3>
+      <div className="cart-container">
+        {cart.map((item) => (
+          <div className="cart-products">
+            <h3 className="shoe-name">{item.name} </h3>
+            <h2 className="shoe-price-cart"> ${item.price} </h2>
+            <img className="cart-shoe-image" alt={item.name} src={item.img} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

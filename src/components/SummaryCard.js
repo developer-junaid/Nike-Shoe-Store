@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     background: "#e0e0e0",
-    position: "relative",
     width: "30%",
-    top: 10,
+    marginBottom: 30,
+    margin:"0 auto",
   },
   title: {
     fontSize: 20,

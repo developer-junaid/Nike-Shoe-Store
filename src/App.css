@@ -571,13 +571,46 @@ body {
 
 /* Cart */
 
+
 .cart-container {
-  position: relative;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
+
+.cart-products {
+  display: inline-block;
+  margin: 10px 10px;
+  text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 20px;
+  padding: 10px 0;
+  background: #d5da0b1c;
+  box-shadow: 2px 2px 2px gray;
+  width: 270px;
+  height: 250px;
+}
+
+.cart-shoe-image {
+  height: 150px;
+}
+
+.your-products{
+  color: green;
+  margin: 15px;
+  text-shadow: 2px 3px 3px gray;
+}
+
+.shoe-price-cart{
+  font-size: 20px;
+  font-family: cursive;
+  color: green;
+  text-shadow: 1px 1px 1px gray;
+
+}
+
+
 
 /* Summary Card */
 .summary-text {
