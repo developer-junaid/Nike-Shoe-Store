@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import NikeImage from "../images/nike.svg";
+import cartImage2 from "../images/cart7.svg";
+import Badge from "@material-ui/core/Badge";
+import { CartContext } from "../CartContext";
 
 function Nav() {
+  // Use Context
+  const [cart, setCart] = useContext(CartContext);
+
   // Use state
   const [homeState, setHomeState] = useState(
     "hvr-underline-from-center nav-link active"
@@ -44,7 +50,7 @@ function Nav() {
   };
 
   // Cart
-  const setCart = () => {
+  const setTheCart = () => {
     setHomeState("hvr-underline-from-center nav-link");
     setAboutState("hvr-underline-from-center nav-link");
     setProductState("hvr-underline-from-center nav-link");
@@ -57,7 +63,8 @@ function Nav() {
       <div className="nav-container">
         <nav>
           <h2>
-            <img className="logo" src={NikeImage} alt="Nike Logo" />
+            <img className="logo" src={NikeImage} title="Nike logo" alt="Nike Logo" />
+
             <Link className={homeState} to="/" onClick={setHome}>
               {" "}
               Home{" "}
@@ -70,10 +77,18 @@ function Nav() {
               {" "}
               Products{" "}
             </Link>
-            <Link className={cartState} to="/cart" onClick={setCart}>
-              {" "}
-              Cart{" "}
-            </Link>
+            {/* Badged */}
+            <Badge badgeContent={cart.length} color="primary">
+              <Link className={cartState} to="/cart" onClick={setTheCart}>
+                {" "}
+                <img
+                  alt="cart"
+                  title="cart"
+                  className="nav-cart"
+                  src={cartImage2}
+                />{" "}
+              </Link>
+            </Badge>
           </h2>
         </nav>
       </div>

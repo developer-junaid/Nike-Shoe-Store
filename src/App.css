@@ -69,7 +69,7 @@ body {
 .nav-link {
   text-decoration: none;
   color: black;
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px;
   font-variant: small-caps;
 }
@@ -78,7 +78,7 @@ body {
   height: 100px;
   position: absolute;
   left: 40px;
-  top: 90px;
+  top: 78px;
 }
 
 .active {
@@ -86,6 +86,12 @@ body {
   color: black;
   border-bottom: 3px solid #6f2f40;
   font-variant: small-caps;
+}
+
+.nav-cart {
+  height: 35px;
+  margin: 0;
+  padding: 0;
 }
 
 /* MEDIA QUERIES */
@@ -515,6 +521,17 @@ body {
   outline: none;
   background: #efd2d2;
   cursor: pointer;
+  box-shadow: 0 5px #999;
+}
+
+.cart-button:hover {
+  background: #3e8e41ce;
+}
+
+.cart-button:active {
+  background-color: #3b953e;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
 }
 
 /* MEDIA QUERIES */
@@ -551,6 +568,41 @@ body {
     font-size: 14px;
   }
 }
+
+
+
+
+
+
+/* Cart */
+
+
+.cart-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgba(133, 132, 132, 0.513);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 
