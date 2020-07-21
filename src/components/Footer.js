@@ -5,47 +5,47 @@ function Footer() {
   return (
     <div className="footer-container">
       
-      <div class="page-wrapper"></div>
+      <div className="page-wrapper"></div>
       <hr />
       <footer>
-        <div class="footer">
-          <div class="footer-content">
-            <div class="footer-section about">
+        <div className="footer">
+          <div className="footer-content">
+            <div className="footer-section about">
               
-              <p class="footer-para">
+              <p className="footer-para">
                Developer: <span className='my-name'> Junaid Qureshi</span>
               </p>
-              <div class="contact">
+              <div className="contact">
                 
               </div>
-              <div class="socials">
+              <div className="socials">
                 <a
                   href="https://www.facebook.com/profile.php?id=100041078220896"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/junaid-qureshi-34a180194/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <i class="fab fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
                 <a
                   href="https://twitter.com/Junaid084869/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <i class="fab fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
                 <a
                   href="https://github.com/developer-junaid"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <i class="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
                 </a>
               </div>
             </div>

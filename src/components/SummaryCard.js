@@ -7,36 +7,36 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
+    background: "#e0e0e0",
     position: "relative",
     width: "30%",
     top: 10,
   },
-
   title: {
     fontSize: 20,
   },
   pos: {
     marginBottom: 12,
-  },
+  }
 });
 
 export default function SummaryCard({ items, amount }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} variant="body2">
+    <Card className={classes.root} variant="elevation" elevation={8} >
       <CardContent>
         <Typography className={classes.title} variant="h3" gutterBottom>
           Order Summary
         </Typography>
 
         <Typography className={classes.pos} color="textSecondary">
-          Total Items : {items}
+          Total Items : <strong className="summary-text">{items}</strong>
         </Typography>
         <Typography className={classes.title} variant="h5" gutterBottom>
-          Total Amount : ${amount}
+          Total Amount : <strong className="summary-text">${amount}</strong>
         </Typography>
-        <Link className="hvr-grow about-button" to="/about">
+        <Link className="hvr-grow about-button" to="/checkout">
           Proceed to Checkout
         </Link>
       </CardContent>

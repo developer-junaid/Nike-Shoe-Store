@@ -6,7 +6,7 @@ import { CartProvider } from "./CartContext";
 
 function App() {
   return (
-    <div className="container">
+    <div className={'container'}>
       <CartProvider>
         <RouterFunction />
         <Footer />

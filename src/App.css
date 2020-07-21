@@ -569,40 +569,20 @@ body {
   }
 }
 
-
-
-
-
-
 /* Cart */
 
-
-.cart-container{
+.cart-container {
   position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  background: rgba(133, 132, 132, 0.513);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Summary Card */
+.summary-text {
+  font-family: "Allerta", sans-serif;
+}
 
 /* FOOTER */
 

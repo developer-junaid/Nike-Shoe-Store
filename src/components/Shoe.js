@@ -4,7 +4,6 @@ import cartImage from "../images/cart1.svg";
 import { CartContext } from "../CartContext";
 import Tooltip from "@material-ui/core/Tooltip";
 
-
 function Shoe({ shoe, keyName }) {
   // Use Context
   const [cart, setCart] = useContext(CartContext);
@@ -15,9 +14,10 @@ function Shoe({ shoe, keyName }) {
     setCart((totalItems) => [...totalItems, item]);
   };
 
-
   return (
     <div className="hvr-grow products">
+      <h3 className="shoe-name">{shoe.name} </h3>
+      <h2 className="shoe-price"> ${shoe.price} </h2>
       <Link key={keyName} to={`/product/${keyName}`}>
         <img
           className="products-shoe-image"
@@ -26,8 +26,7 @@ function Shoe({ shoe, keyName }) {
           src={shoe.img}
         />
       </Link>
-      <h3 className="shoe-name">{shoe.name} </h3>
-      <h2 className="shoe-price"> ${shoe.price} </h2>
+      <br />
       <Tooltip title="Add to cart" aria-label="add to cart">
         <button onClick={addToCart} className="cart-button">
           <img className="cart-image" src={cartImage} alt="add to cart" />
