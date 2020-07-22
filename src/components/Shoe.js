@@ -9,9 +9,22 @@ function Shoe({ shoe, keyName }) {
   const [cart, setCart] = useContext(CartContext);
 
   // Add to cart
-  const addToCart = () => {
-    const item = { name: shoe.name, price: shoe.price, img: shoe.img };
-    setCart((totalItems) => [...totalItems, item]);
+  const addToCart = (shoeProduct) => {
+    let newCart = [...cart];
+    let itemInCart = newCart.find((item) => shoeProduct.name === item.name);
+    // Condition
+    if (itemInCart) {
+      itemInCart.quantity++;
+    } else {
+      itemInCart = {
+        ...shoeProduct,
+        quantity: 1,
+      };
+      newCart.push(itemInCart);
+    }
+    // ...
+
+    setCart(newCart);
   };
 
   return (
@@ -28,7 +41,7 @@ function Shoe({ shoe, keyName }) {
       </Link>
       <br />
       <Tooltip title="Add to cart" aria-label="add to cart">
-        <button onClick={addToCart} className="cart-button">
+        <button onClick={() => addToCart(shoe)} className="cart-button">
           <img className="cart-image" src={cartImage} alt="add to cart" />
         </button>
       </Tooltip>

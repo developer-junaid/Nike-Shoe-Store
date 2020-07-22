@@ -57,6 +57,13 @@ function Nav() {
     setCartState("hvr-underline-from-center nav-link active");
   };
 
+   // Get Cart Total
+   const getCartTotal = () => {
+    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+  };
+  // Total
+  const totalItems = getCartTotal();
+
   return (
     <div>
       <h1 className="nike-shoes">Nike Shoes</h1>
@@ -78,7 +85,7 @@ function Nav() {
               Products{" "}
             </Link>
             {/* Badged */}
-            <Badge badgeContent={cart.length} color="primary">
+            <Badge badgeContent={totalItems} color="primary">
               <Link className={cartState} to="/cart" onClick={setTheCart}>
                 {" "}
                 <img
