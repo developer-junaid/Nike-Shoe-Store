@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { CartContext } from "../CartContext";
 import "../App.css";
 import SummaryCard from "./SummaryCard";
+import clearCartImage from '../images/empty-cart.svg';
+import crossImage from '../images/cross3.svg';
 
 function Cart() {
   // Use Context
@@ -41,7 +43,7 @@ function Cart() {
       <SummaryCard items={totalItems} amount={total} />
       {/* Condition */}
       {cart.length > 0 && (
-        <button className='clear-cart-button' onClick={() => clearCart()}> Clear Cart </button>
+        <button className='clear-cart-button' onClick={() => clearCart()}> <img height={50} src={clearCartImage} alt='Empty Cart' title='Empty Cart'/> </button>
       )}
       <hr />
       <h3 className="your-products">Your Products</h3>
@@ -49,7 +51,7 @@ function Cart() {
         {cart.map((item, idx) => (
           <div className="cart-products" key={idx}>
             <h3 className="cart-shoe-name">{item.name} </h3>
-            <button className='remove-btn' onClick={() => removeProduct(item)}>X</button>
+            <button className='remove-btn hvr-grow' onClick={() => removeProduct(item)}> <img src={crossImage} height={30} alt='Remove' title='Remove'/> </button>
 
             <h2 className="shoe-price-cart"> ${item.price} </h2>
             <label htmlFor="quantity">Items</label>{" "}

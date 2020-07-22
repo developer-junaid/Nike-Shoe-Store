@@ -534,6 +534,23 @@ body {
   transform: translateY(4px);
 }
 
+.back-btn {
+  position: absolute;
+  left: 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.63);
+  padding: 4px;
+  margin: 20px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px gray;
+  border: 2px solid rgba(0, 0, 0, 0.678);
+}
+
+.back-btn:hover {
+  background: rgb(47, 45, 45);
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 500px) {
   .products {
@@ -592,9 +609,10 @@ body {
   height: 290px;
 }
 
-.cart-shoe-name{
+.cart-shoe-name {
   color: black;
-  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 .cart-shoe-image {
@@ -610,7 +628,7 @@ body {
 
 .shoe-price-cart {
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: "Times New Roman", Times, serif !important;
   color: rgb(42, 38, 38);
 }
 
@@ -639,18 +657,13 @@ body {
   color: black;
   font-size: 20px;
   right: 10px;
-  padding: 0 ;
+  padding: 0;
   cursor: pointer;
 }
 
-.remove-btn:hover {
-  color: #e00000;
-}
-
-
 .clear-cart-button {
   margin: 10px;
-  padding:10px;
+  padding: 10px;
   border-radius: 10px;
   border: none;
   outline: none;
