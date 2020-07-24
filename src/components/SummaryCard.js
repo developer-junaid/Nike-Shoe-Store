@@ -10,21 +10,21 @@ const useStyles = makeStyles({
     background: "#e0e0e0",
     width: "30%",
     marginBottom: 30,
-    margin:"0 auto",
+    margin: "0 auto",
   },
   title: {
     fontSize: 20,
   },
   pos: {
     marginBottom: 12,
-  }
+  },
 });
 
 export default function SummaryCard({ items, amount }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} variant="elevation" elevation={8} >
+    <Card className={classes.root} variant="elevation" elevation={8}>
       <CardContent>
         <Typography className={classes.title} variant="h3" gutterBottom>
           Order Summary
@@ -36,9 +36,11 @@ export default function SummaryCard({ items, amount }) {
         <Typography className={classes.title} variant="h5" gutterBottom>
           Total Amount : <strong className="summary-text">${amount}</strong>
         </Typography>
-        <Link className="hvr-grow about-button" to="/checkout">
-          Proceed to Checkout
-        </Link>
+        {amount > 0 && (
+          <Link className="hvr-grow about-button" to="/checkout">
+            Proceed to Checkout
+          </Link>
+        )}
       </CardContent>
     </Card>
   );
