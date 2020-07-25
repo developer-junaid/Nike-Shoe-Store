@@ -783,38 +783,26 @@ fieldset {
   color: gray;
 }
 
-
-
-
-
 /* PLACE ORDER */
 
-.placeOrder-container{
+.placeOrder-container {
   font-family: "PT Sans Narrow", sans-serif;
   box-shadow: 1px 2px 2px gray;
   padding: 10px;
   margin: 10px;
 }
 
-.placeOrder-container > p{
+.placeOrder-container > p {
   font-size: 20px;
 }
 
-.dont-worry{
+.dont-worry {
   color: gray;
 }
 
-.thankyou{
+.thankyou {
   color: green;
 }
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 
@@ -894,6 +882,12 @@ fieldset {
 
 .logo-text .logo-span {
   color: #ec4961;
+}
+
+.copyright {
+  font-size: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: gray;
 }
 
 /* MEDIA QUERIES */

@@ -15,6 +15,7 @@ function Footer() {
               <p className="footer-para">
                Developer: <span className='my-name'> Junaid Qureshi</span>
               </p>
+             
               <div className="contact">
                 
               </div>
@@ -48,6 +49,7 @@ function Footer() {
                   <i className="fab fa-github"></i>
                 </a>
               </div>
+              <p className='copyright'>Copyright&nbsp;&copy;&nbsp;Nike Shoes Template</p><br/>
             </div>
           </div>
         </div>
