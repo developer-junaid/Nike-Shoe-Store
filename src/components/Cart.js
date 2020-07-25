@@ -45,8 +45,7 @@ function Cart() {
       {cart.length > 0 && (
         <button className="clear-cart-button" onClick={() => clearCart()}>
           {" "}
-          <img
-            height={50}
+          <img className='clear-cart-image'
             src={clearCartImage}
             alt="Empty Cart"
             title="Empty Cart"
@@ -70,7 +69,7 @@ function Cart() {
                 alt="Remove"
                 title="Remove"
               />{" "}
-            </button>
+            </button><br/>
             <h2 className="shoe-price-cart"> ${item.price} </h2>
             <label htmlFor="quantity">Items</label>{" "}
             <input
