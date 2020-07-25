@@ -5,7 +5,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
 import { ShippingContext } from "../CartContext";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function Checkout() {
   // Create Shipping Context
@@ -116,6 +116,11 @@ function Checkout() {
               label="Payment is Cash on Delivery only"
             />
             <br />
+            <Link to="/cart">
+              <Button variant="contained" type="button" color="primary">
+                Back
+              </Button>
+            </Link>
             <Button variant="contained" type="submit" color="primary">
               Submit and proceed
             </Button>

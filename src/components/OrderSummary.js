@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import { ShippingContext, CartContext } from "../CartContext";
+import {Link} from 'react-router-dom';
+import Button from "@material-ui/core/Button";
+
 
 function OrderSummary() {
   // Use Context
@@ -82,6 +85,19 @@ function OrderSummary() {
           <p>Payment: "Cash On Delivery"</p>
           <br />
         </div>
+
+          {/* Buttons */}
+          <br/><br/>
+          <Link to="/checkout">
+              <Button variant="contained" type="button" color="primary">
+                Back
+              </Button>
+            </Link>
+            <Link to="/placeorder">
+              <Button variant="contained" type="button" color="primary">
+                Place Order
+              </Button>
+            </Link>
       </div>
     </div>
   );

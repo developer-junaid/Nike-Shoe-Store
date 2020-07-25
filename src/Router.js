@@ -8,6 +8,8 @@ import Nav from "./components/Nav";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import OrderSummary from "./components/OrderSummary";
+import PlaceOrder from "./components/PlaceOrder";
+
 
 function RouterFunction() {
   return (
@@ -18,6 +20,7 @@ function RouterFunction() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route exact path="/product" component={Product} />
+          <Route path="/placeorder" component={PlaceOrder} />
           <Route path="/cart" component={Cart} />
           <Route path="/checkout" component={Checkout} />
           <Route path="/ordersummary" component={OrderSummary} />
