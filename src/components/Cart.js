@@ -43,17 +43,20 @@ function Cart() {
       <SummaryCard items={totalItems} amount={total} />
       {/* Condition */}
       {cart.length > 0 && (
-        <button className="clear-cart-button" onClick={() => clearCart()}>
+       <div> <button className="clear-cart-button" onClick={() => clearCart()}>
           {" "}
-          <img className='clear-cart-image'
+          <img
+            className="clear-cart-image"
             src={clearCartImage}
             alt="Empty Cart"
             title="Empty Cart"
           />{" "}
         </button>
+        <h3 className="your-products">Your Products</h3>
+        </div>
       )}
-      <hr />
-      <h3 className="your-products">Your Products</h3>
+
+      
       <div className="cart-container">
         {cart.map((item, idx) => (
           <div className="cart-products" key={idx}>
@@ -69,7 +72,8 @@ function Cart() {
                 alt="Remove"
                 title="Remove"
               />{" "}
-            </button><br/>
+            </button>
+            <br />
             <h2 className="shoe-price-cart"> ${item.price} </h2>
             <label htmlFor="quantity">Items</label>{" "}
             <input

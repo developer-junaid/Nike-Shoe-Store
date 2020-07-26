@@ -13,9 +13,7 @@ function Home() {
           over 50 years. Our roots are firmly grounded in Pakistan and with its
           people.
         </div>
-        <Link className="hvr-grow about-button" to="/about">
-          About Us
-        </Link>
+       
         <br />
         <br />
         <br />
@@ -29,11 +27,10 @@ function Home() {
             {Object.keys(Shoes).map((keyName) => {
               const shoe = Shoes[keyName];
               return (
-                <Link
+                <div
                   className="home-products"
                   key={keyName}
-                  to={`/product/${keyName}`}
-                >
+                > 
                   <img
                     className="products-shoe-image"
                     alt="Shoe"
@@ -41,7 +38,7 @@ function Home() {
                   />
                   <h3 className="shoe-name">{shoe.name}</h3>
                   <h3 className="shoe-price">${shoe.price}</h3>
-                </Link>
+                </div>
               );
             })}
           </div>

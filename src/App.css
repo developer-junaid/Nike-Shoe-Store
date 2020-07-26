@@ -1,11 +1,12 @@
 * {
-  margin: 0 4px;
-  padding: 0;
+  margin: 0;
+  padding: 0 4px;
   box-sizing: border-box;
 }
 
 body {
-  background: #ffffff;
+  background: linear-gradient(-90deg, gray, white);
+  height: 100vh;
 }
 
 /* Main Container */
@@ -52,7 +53,7 @@ body {
 
 .nike-shoes {
   margin: 20px;
-  text-shadow: 2px 4px 8px #5d0137;
+  text-shadow: 2px 4px 8px white;
   font-variant: small-caps;
   font-size: 200%;
   color: #500619;
@@ -60,6 +61,8 @@ body {
 
 .nav-container {
   display: flex;
+  background: #e0d9e7c5;
+  border-radius: 30px;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 20px;
@@ -77,8 +80,8 @@ body {
 .logo {
   height: 100px;
   position: absolute;
-  left: 40px;
-  top: 78px;
+  left: 50px;
+  top: 67px;
 }
 
 .active {
@@ -143,16 +146,16 @@ body {
   background-position: center;
   height: 100vh;
   border-radius: 20px;
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 10px 10px 10px rgba(14, 12, 12, 0.534);
 }
 
 .tagline {
   display: block;
   font-family: "Acme", sans-serif;
   font-size: 70px;
-  color: #6f2f40;
+  color: #5d0137;
   margin-top: 50px;
-  text-shadow: 2px 4px 2px #5d0137;
+  text-shadow: 2px 4px 2px #e7d8e1;
 }
 
 .tagline-para {
@@ -163,7 +166,7 @@ body {
   justify-content: center;
   font-family: "Karla", sans-serif;
   font-size: 25px;
-  color: #948989;
+  color: #0c0b0bfd;
 }
 
 .about-button {
@@ -197,13 +200,13 @@ body {
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /** Latest designs Home **/
 .latest-designs {
   font-size: 20px;
-  text-shadow: 1px 1px 2px #5d0137;
+  text-shadow: 1px 1px 2px #ffffff;
 }
 
 .latest-container {
@@ -227,8 +230,18 @@ body {
   border-radius: 20px;
   padding: 10px 0;
   box-shadow: 2px 2px 2px gray;
+  font-size: 100%;
   width: 270px;
+  background: white;
   height: 250px;
+}
+
+.home-products:hover {
+  border: 1px solid rgba(14, 12, 12, 0.87);
+}
+
+.product-container h3 {
+  font-size: 98%;
 }
 
 /* MEDIA QUERIES */
@@ -249,7 +262,10 @@ body {
   .home-products {
     width: 200px;
     height: 150px;
+  font-size: 70%;
   }
+
+  
 
   .tagline {
     font-size: 50px;
@@ -494,9 +510,10 @@ body {
 .products {
   margin: 10px 10px;
   text-decoration: none;
+  background: white;
   border: 1px solid rgba(128, 128, 128, 0.24);
   border-radius: 20px;
-  padding: 10px 0;
+  padding: 10px 20px;
   box-shadow: 8px 8px 8px #481444;
   width: 350px;
   height: 300px;
@@ -514,6 +531,7 @@ body {
   color: rgb(96, 110, 96);
   text-shadow: 1px 1px 1px black;
 }
+
 /* Product Items */
 .product-items {
   margin: 10px auto;
@@ -525,6 +543,10 @@ body {
 
 .shoe-image {
   width: 80%;
+  margin: 10px;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px gray;
+
   height: auto;
 }
 
@@ -589,7 +611,7 @@ body {
 
   .products {
     width: 200px;
-    height: 180px;
+    height: 220px;
   }
 
   .products-shoe-image {
@@ -622,7 +644,7 @@ body {
   border: 1px solid rgba(128, 128, 128, 0.24);
   border-radius: 20px;
   padding: 10px 0;
-  background: #d5da0b1c;
+  background: #fafaf8;
   box-shadow: 2px 2px 2px gray;
   width: 300px;
   height: 290px;
@@ -660,6 +682,7 @@ body {
   text-shadow: 1px 1px 2px gray;
   align-self: center;
   padding: 8px;
+  outline: none;
   border-radius: 10px;
   width: 60px;
   background: #e0e0e0;
@@ -806,8 +829,9 @@ fieldset {
 
 .checkout-form input {
   font-size: 16px;
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
+  border-radius: 10px;
   justify-content: space-around;
   border: none;
   border-bottom: 1px solid black;
@@ -848,7 +872,7 @@ fieldset {
   margin: 0 auto;
   height: 1100px;
   border-radius: 20px;
-  box-shadow: 6px 6px 10px gray;
+  box-shadow: -6px -6px 10px rgb(133, 116, 116);
   border: 1px solid rgba(121, 104, 104, 0.287);
   padding: 20px;
 }
@@ -858,12 +882,13 @@ fieldset {
 }
 
 .place-order-container > h1 {
-  border-bottom: 2px solid #481444;
+  border-bottom: 2px solid #201414;
 }
 
 .items-container {
-  box-shadow: 2px 2px 2px gray;
-  margin: 10px;
+  box-shadow: 2px 2px 2px rgb(0, 19, 128);
+  margin: 15px 0;
+  padding: 3px;
 }
 
 .item-quantity {
@@ -890,7 +915,7 @@ fieldset {
 }
 
 .shipping-container {
-  box-shadow: 2px 2px 2px gray;
+  box-shadow: 4px 4px 4px rgb(0, 19, 128);
   margin: 10px;
 }
 
@@ -931,7 +956,7 @@ fieldset {
 
 .placeOrder-container {
   font-family: "PT Sans Narrow", sans-serif;
-  box-shadow: 1px 2px 2px gray;
+  box-shadow: 1px 2px 2px rgb(0, 19, 128);
   padding: 10px;
   margin: 10px;
 }
@@ -941,7 +966,7 @@ fieldset {
 }
 
 .dont-worry {
-  color: gray;
+  color: rgb(46, 35, 35);
 }
 
 .thankyou {
@@ -975,7 +1000,8 @@ fieldset {
 }
 
 .footer {
-  color: black;
+  color: white;
+
   height: 100px;
   position: relative;
 }
@@ -991,17 +1017,20 @@ fieldset {
 }
 
 .footer .footer-content h1 {
-  color: black;
+  color: rgba(255, 255, 255, 0.863);
 }
 
 .footer-para {
   margin: 10px 0;
   font-variant: small-caps;
   font-size: x-large;
+  color: #17161850;
+  text-shadow: 0px 0px 1px black;
 }
 
 .my-name {
-  color: #5e1e37;
+  color: #6b196b;
+  text-shadow: 2px 2px 2px rgb(243, 222, 222);
 }
 
 .footer .footer-content .about .contact span {
@@ -1013,7 +1042,7 @@ fieldset {
 .footer .footer-content .about .socials a {
   border: 1px solid gray;
   width: 45px;
-  height: 38px;
+  height: 42px;
   padding-top: 5px;
   margin-right: 5px;
   margin-bottom: 20px;
@@ -1028,7 +1057,7 @@ fieldset {
 
 .footer .footer-content .about .socials a:hover {
   color: rgb(30, 30, 150);
-  border: 1px solid black;
+  border: 1px solid white;
   transition: all 0.3s;
 }
 
@@ -1040,14 +1069,10 @@ fieldset {
   font-variant: initial;
 }
 
-.logo-text .logo-span {
-  color: #ec4961;
-}
-
 .copyright {
   font-size: 20px;
   font-family: "PT Sans Narrow", sans-serif;
-  color: gray;
+  color: rgb(31, 20, 20);
 }
 
 /* MEDIA QUERIES */
@@ -1075,7 +1100,7 @@ fieldset {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .footer-para {
     font-size: 15px !important;
   }
@@ -1085,7 +1110,7 @@ fieldset {
   }
 
   .footer .footer-content .about .socials a {
-    width: 30px;
+    width: 40px;
     height: 38px;
     padding-top: 5px;
     margin-right: 5px;
