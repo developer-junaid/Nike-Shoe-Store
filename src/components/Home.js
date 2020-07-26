@@ -13,7 +13,7 @@ function Home() {
           over 50 years. Our roots are firmly grounded in Pakistan and with its
           people.
         </div>
-       
+
         <br />
         <br />
         <br />
@@ -27,13 +27,10 @@ function Home() {
             {Object.keys(Shoes).map((keyName) => {
               const shoe = Shoes[keyName];
               return (
-                <div
-                  className="home-products"
-                  key={keyName}
-                > 
+                <div className="home-products" key={keyName}>
                   <img
                     className="products-shoe-image"
-                    alt="Shoe"
+                    alt={shoe.name}
                     src={shoe.img}
                   />
                   <h3 className="shoe-name">{shoe.name}</h3>
