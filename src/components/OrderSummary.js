@@ -94,7 +94,7 @@ function OrderSummary() {
               </Button>
             </Link>
             <Link to="/placeorder">
-              <Button variant="contained" type="button" color="primary">
+              <Button variant="contained"  type="button" color="primary">
                 Place Order
               </Button>
             </Link>
