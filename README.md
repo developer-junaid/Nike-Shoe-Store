@@ -8,15 +8,19 @@
 https://www.youtube.com/watch?v=EDyGLYiLBus&feature=youtu.be
 
 
-# IMAGES
-<img src='nikeImages/1.png' alt='HOMEPAGE' />
-<img src='nikeImages/2.png' alt='HOMEPAGE' />
-<img src='nikeImages/3.png' alt='HOMEPAGE' />
+# HOMEPAGE
+<img src='/images/NikeSite.png'/>
 
 
 http://nike-shoe-store.surge.sh/
 
+## Features
 
+- View Products
+- Add products to cart
+- Delete products from cart
+- Form Validation
+- Accessibility Optimized
 
 ## Run Locally 
 
@@ -28,10 +32,7 @@ http://nike-shoe-store.surge.sh/
 - HTML5
 - CSS3
 - Javascript ES6
-- React
-- React Hooks
-- React Router
-- VS Code
-- Nike Images
+- React js
+- Material UI
 - Surge
 - Github Actions
