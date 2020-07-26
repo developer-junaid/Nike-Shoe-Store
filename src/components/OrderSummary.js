@@ -36,7 +36,7 @@ function OrderSummary() {
         {cart.map((item, idx) => (
           <div key={idx} className="items-container">
             <p className="left">
-              {idx + 1}.&nbsp; {item.name}&nbsp;&nbsp; ({" "}
+              {idx + 1}.&nbsp; {item.name}(
               <span className="item-quantity">{item.quantity}</span>)
             </p>
 

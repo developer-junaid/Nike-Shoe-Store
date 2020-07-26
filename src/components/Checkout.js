@@ -50,7 +50,6 @@ function Checkout() {
               required
               placeholder="First Name"
             />
-            &nbsp;&nbsp;&nbsp;
             <input
               type="text"
               name="last_name"
@@ -79,16 +78,14 @@ function Checkout() {
               required
               placeholder="City"
             />
-            &nbsp;&nbsp;&nbsp;
             <input
               type="text"
               name="state"
               ref={register}
               required
               placeholder="State/Province/Region"
-              size="100%    "
+              size="100%"
             />
-            <br />
             <input
               type="number"
               name="zip_code"
@@ -100,7 +97,6 @@ function Checkout() {
               required
               placeholder="Zip Code"
             />
-            &nbsp;&nbsp;&nbsp;
             <input
               type="text"
               name="country"
@@ -110,18 +106,18 @@ function Checkout() {
             />
             <br />
             <br />
-            <FormControlLabel
+            <FormControlLabel 
               disabled
               control={<Checkbox checked name="payment_method" />}
-              label="Payment is Cash on Delivery only"
+              label={<span style={{ fontSize: '0.7rem' }}>Payment is Cash on Delivery only</span>}
             />
             <br />
             <Link to="/cart">
-              <Button variant="contained" type="button" color="primary">
+              <Button className='checkout-btn' variant="contained" type="button" color="primary">
                 Back
               </Button>
             </Link>
-            <Button variant="contained" type="submit" color="primary">
+            <Button variant="contained" className='checkout-btn' type="submit" color="primary">
               Submit and proceed
             </Button>
           </fieldset>

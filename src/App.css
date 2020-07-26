@@ -54,7 +54,7 @@ body {
   margin: 20px;
   text-shadow: 2px 4px 8px #5d0137;
   font-variant: small-caps;
-  font-size: 40px;
+  font-size: 200%;
   color: #500619;
 }
 
@@ -103,12 +103,16 @@ body {
 }
 
 @media (max-width: 500px) {
+  .nike-shoes {
+    font-size: 150%;
+  }
+
   .nav-container {
     font-size: x-small;
   }
 
   .nav-cart {
-  height: 25px;
+    height: 25px;
   }
 }
 
@@ -125,10 +129,9 @@ body {
     padding: 10px 1;
   }
 
-  .nav-cart{
+  .nav-cart {
     height: 14px;
   }
-
 }
 
 /* HOME */
@@ -688,7 +691,7 @@ body {
   box-shadow: 0 5px #999;
 }
 
-.clear-cart-image{
+.clear-cart-image {
   height: 50px;
 }
 
@@ -706,103 +709,73 @@ body {
   font-family: "Allerta", sans-serif;
 }
 
-.card{
+.card {
   background-color: #e0e0e0 !important;
   width: 80% !important;
   margin-bottom: 30px !important;
   margin: 0 auto !important;
 }
 
-.title{
+.title {
   font-size: 40px !important;
-
 }
 
-.pos{
+.pos {
   margin-bottom: 12 !important;
-
 }
-
 
 /* MEDIA QUERIES */
 
 @media (max-width: 900px) {
-  .title{
+  .title {
     font-size: 30px !important;
   }
 
-  .summary-text{
+  .summary-text {
     font-size: 20px !important;
   }
-
 }
 
-
 @media (max-width: 500px) {
-  .title{
+  .title {
     font-size: 20px !important;
   }
 
-  .summary-text{
+  .summary-text {
     font-size: 10px !important;
   }
 
-  .clear-cart-button{
+  .clear-cart-button {
     margin: 10px 10px;
     padding: 5px;
   }
 
-  .clear-cart-image{
+  .clear-cart-image {
     height: 35px;
   }
-
 }
 
 @media (max-width: 350px) {
-  .title{
+  .title {
     font-size: 20px !important;
   }
   .about-button {
     font-size: 10px;
   }
-  
 
-  .summary-text{
+  .summary-text {
     font-size: 10px !important;
   }
 
-  .clear-cart-button{
+  .clear-cart-button {
     margin: 10px 10px;
     padding: 5px;
   }
 
-  .clear-cart-image{
+  .clear-cart-image {
     height: 35px;
   }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* CHECKOUT */
 .checkout-parent {
@@ -841,10 +814,30 @@ fieldset {
   outline: none;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 550px) {
+  .checkout-form input {
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .checkout-btn {
+    margin: 0 auto !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .checkout-btn {
+    font-size: 8px !important;
+  }
+}
+
 /* .. */
 
-/* Place Order */
-/* CHECKOUT */
+/* Order Summary */
 .place-order-parent {
   display: flex;
   font-family: "PT Sans Narrow", sans-serif;
@@ -883,12 +876,16 @@ fieldset {
 .left {
   text-align: left;
   width: 60%;
+  font-size: 100% !important;
+
   display: inline-block;
 }
 
 .right {
   text-align: right;
   width: 30%;
+  font-size: 100% !important;
+
   display: inline-block;
 }
 
@@ -901,6 +898,35 @@ fieldset {
   color: gray;
 }
 
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+  .place-order-container h1 {
+    font-size: 97%;
+  }
+
+  .left {
+    font-size: 90% !important;
+  }
+  .right {
+    font-size: 90% !important;
+  }
+  .shipping-container h2 {
+    font-size: 90% !important;
+  }
+
+  .shipping-container p {
+    font-size: 80% !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .left {
+    font-size: 80% !important;
+  }
+}
+/* .. */
+
 /* PLACE ORDER */
 
 .placeOrder-container {
@@ -911,7 +937,7 @@ fieldset {
 }
 
 .placeOrder-container > p {
-  font-size: 20px;
+  font-size: 100%;
 }
 
 .dont-worry {
@@ -920,8 +946,24 @@ fieldset {
 
 .thankyou {
   color: green;
+  padding: 10px;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 850px) {
+  .thankyou {
+    font-size: 100%;
+  }
+
+  .dont-worry {
+    font-size: 110%;
+  }
+  .placeOrder-container > p {
+    font-size: 80%;
+  }
+}
+
+/* .. */
 /* FOOTER */
 
 /* Footer container */
