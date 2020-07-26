@@ -2,7 +2,6 @@
   margin: 0 4px;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merienda One", cursive;
 }
 
 body {
@@ -11,17 +10,12 @@ body {
 
 /* Main Container */
 .container {
+  font-family: "Merienda One", cursive;
   width: 100%;
   text-align: center;
 }
 
-
-
 /* NAV */
-
-
-
-
 
 /* NAV HOVER EFFECT */
 .hvr-underline-from-center {
@@ -56,13 +50,11 @@ body {
   right: 0;
 }
 
-
-
 .nike-shoes {
   margin: 20px;
   text-shadow: 2px 4px 8px #5d0137;
   font-variant: small-caps;
-  font-size: 40px;
+  font-size: 200%;
   color: #500619;
 }
 
@@ -77,7 +69,7 @@ body {
 .nav-link {
   text-decoration: none;
   color: black;
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px;
   font-variant: small-caps;
 }
@@ -86,9 +78,8 @@ body {
   height: 100px;
   position: absolute;
   left: 40px;
-  top: 90px;
+  top: 78px;
 }
-
 
 .active {
   text-decoration: none;
@@ -97,8 +88,11 @@ body {
   font-variant: small-caps;
 }
 
-
-
+.nav-cart {
+  height: 35px;
+  margin: 0;
+  padding: 0;
+}
 
 /* MEDIA QUERIES */
 
@@ -109,32 +103,38 @@ body {
 }
 
 @media (max-width: 500px) {
+  .nike-shoes {
+    font-size: 150%;
+  }
+
   .nav-container {
     font-size: x-small;
   }
+
+  .nav-cart {
+    height: 25px;
+  }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .nav-link {
     margin: 10px 0;
     padding: 10px 2;
   }
 }
 
+@media (max-width: 325px) {
+  .nav-link {
+    margin: 10px 0;
+    padding: 10px 1;
+  }
 
-
-
-
-
-
-
-
+  .nav-cart {
+    height: 14px;
+  }
+}
 
 /* HOME */
-
-
-
-
 
 .banner-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -166,7 +166,6 @@ body {
   color: #948989;
 }
 
-
 .about-button {
   display: inline-block;
   text-decoration: none;
@@ -182,9 +181,6 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   cursor: pointer;
 }
-
-
-
 
 /* Button hover effects */
 .hvr-grow {
@@ -219,8 +215,6 @@ body {
   width: 20%;
 }
 
-
-
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -237,15 +231,13 @@ body {
   height: 250px;
 }
 
+/* MEDIA QUERIES */
 
-  /* MEDIA QUERIES */
-
-
-  @media (max-width: 1000px) {
-    .banner-image {
-      height: 50vh;
-    }
+@media (max-width: 1000px) {
+  .banner-image {
+    height: 50vh;
   }
+}
 
 @media (max-width: 800px) {
   .banner-image {
@@ -258,7 +250,7 @@ body {
     width: 200px;
     height: 150px;
   }
-  
+
   .tagline {
     font-size: 50px;
   }
@@ -266,12 +258,11 @@ body {
   .tagline-para {
     font-size: 20px;
   }
-  
+
   .about-button {
     font-size: 18px;
   }
 }
-
 
 @media (max-width: 500px) {
   .line {
@@ -299,17 +290,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* About */
 
 .banner-image-about {
@@ -323,219 +303,186 @@ body {
   box-shadow: 10px 10px 10px gray;
 }
 
-
-
-.about-nike{
+.about-nike {
   margin-right: 60%;
   padding: 20px;
   padding-top: 230px;
-  
 }
 
-.about-nike-text{
+.about-nike-text {
   font-size: 25px;
   color: black;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   text-shadow: 4px 4px 1px #1e80d4;
 }
 
-.about-nike > p{
+.about-nike > p {
   margin: 20px;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   font-size: 22px;
   color: black;
   text-shadow: 1px 1px 1px rgb(27, 77, 124);
 }
 
-.about-nike-part{
+.about-nike-part {
   margin: 40px;
   padding: 40px;
 }
 
-.about-nike-heading{
-  font-family: 'Rowdies', cursive;
+.about-nike-heading {
+  font-family: "Rowdies", cursive;
   margin: 20px;
   font-size: 40px;
   text-shadow: 4px 2px 1px black;
   color: #5fa5ff;
   font-variant: small-caps;
-  
 }
 
-.about-nike-para{
-  font-family: 'Rowdies', cursive;
+.about-nike-para {
+  font-family: "Rowdies", cursive;
   padding: 0px;
   text-shadow: 1px 1px 1px gray;
   justify-content: center;
   font-size: 25px;
 }
 
-
-
 /* MEDIA QUERIES */
 
-@media (max-width: 1000px){
-
-  .about-nike{
+@media (max-width: 1000px) {
+  .about-nike {
     padding-top: 400px;
   }
 
-  .about-nike-text{
+  .about-nike-text {
     font-size: 20px;
   }
 
-  .about-nike > p{
+  .about-nike > p {
     font-size: 14px;
   }
 
-  .about-nike-heading{
+  .about-nike-heading {
     font-size: 30px;
   }
 
-  .about-nike-part{
+  .about-nike-part {
     margin: 2px;
-    
   }
 
-  .about-nike-para{
+  .about-nike-para {
     font-size: 15px;
   }
-
 }
 
-
-@media (max-width:900px){
-
-  .banner-image-about{
+@media (max-width: 900px) {
+  .banner-image-about {
     height: 50vh;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 90px;
   }
-  
-  .about-nike-heading{
+
+  .about-nike-heading {
     padding: 0;
   }
-  
-  .about-nike-part{
+
+  .about-nike-part {
     padding: 2px;
   }
 
-  .about-nike > p{
+  .about-nike > p {
     font-size: 11px;
   }
 }
 
-
-@media (max-width:750px){
-
-  .banner-image-about{
+@media (max-width: 750px) {
+  .banner-image-about {
     height: 40vh;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 90px;
   }
-  
-  .about-nike-heading{
+
+  .about-nike-heading {
     padding: 0;
   }
-  
-  .about-nike-part{
+
+  .about-nike-part {
     padding: 2px;
   }
 
-  .about-nike > p{
+  .about-nike > p {
     font-size: 11px;
   }
 }
 
-
-
-
-@media (max-width:600px){
-
-  .about-nike{
+@media (max-width: 600px) {
+  .about-nike {
     padding-top: 120px;
   }
-  
-  .about-nike > p{
+
+  .about-nike > p {
     font-size: 8px;
   }
 }
 
-
-
-@media (max-width:500px){
-
-  .about-nike-text{
+@media (max-width: 500px) {
+  .about-nike-text {
     font-size: 13px;
   }
 
-  .about-nike-heading{
+  .about-nike-heading {
     font-size: 25px;
   }
 
-  .about-nike-para{
+  .about-nike-para {
     font-size: 12px;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 100px;
   }
-  
-  .about-nike > p{
+
+  .about-nike > p {
     font-size: 7px;
   }
 }
 
-
-@media (max-width:400px){
-
-  .about-nike-text{
+@media (max-width: 400px) {
+  .about-nike-text {
     font-size: 11px;
     padding: 0;
-    margin:0;
+    margin: 0;
   }
 
-  .about-nike-heading{
+  .about-nike-heading {
     font-size: 23px;
-    padding:0 ;
+    padding: 0;
   }
 
-  .about-nike-para{
+  .about-nike-para {
     font-size: 10px;
   }
 
-  .about-nike{
+  .about-nike {
     padding-top: 100px;
   }
-  
-  .about-nike > p{
+
+  .about-nike > p {
     padding: 0;
-    margin:1;
+    margin: 1;
     font-size: 5px;
   }
 
-  .about-nike{
+  .about-nike {
     padding: 0;
     padding-top: 150px;
   }
-
 }
 
-
-
-
-
-
-
-
-
 /* Product */
-
-
 
 .product-container {
   display: flex;
@@ -551,14 +498,13 @@ body {
   border-radius: 20px;
   padding: 10px 0;
   box-shadow: 8px 8px 8px #481444;
-  width: 300px;
-  height: 250px;
+  width: 350px;
+  height: 300px;
 }
 
 .products-shoe-image {
   height: 150px;
 }
-
 
 .shoe-name {
   color: #5d0137;
@@ -582,6 +528,47 @@ body {
   height: auto;
 }
 
+.cart-image {
+  height: 30px;
+}
+
+.cart-button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #efd2d2;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+}
+
+.cart-button:hover {
+  background: #3e8e41ce;
+}
+
+.cart-button:active {
+  background-color: #3b953e;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+.back-btn {
+  position: absolute;
+  left: 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.63);
+  padding: 4px;
+  margin: 20px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px gray;
+  border: 2px solid rgba(0, 0, 0, 0.678);
+}
+
+.back-btn:hover {
+  background: rgb(47, 45, 45);
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 500px) {
@@ -596,9 +583,13 @@ body {
 }
 
 @media (max-width: 700px) {
+  .cart-image {
+    height: 20px;
+  }
+
   .products {
     width: 200px;
-    height: 150px;
+    height: 180px;
   }
 
   .products-shoe-image {
@@ -614,13 +605,366 @@ body {
   }
 }
 
+/* Cart */
 
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
 
+.cart-products {
+  display: inline-block;
+  margin: 10px 10px;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 20px;
+  padding: 10px 0;
+  background: #d5da0b1c;
+  box-shadow: 2px 2px 2px gray;
+  width: 300px;
+  height: 290px;
+}
 
+.cart-shoe-name {
+  color: black;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif !important;
+}
 
+.cart-shoe-image {
+  border-radius: 50px;
+  height: 150px;
+}
+
+.your-products {
+  color: black;
+  margin: 15px;
+  text-shadow: 2px 3px 3px gray;
+}
+
+.shoe-price-cart {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif !important;
+  color: rgb(42, 38, 38);
+}
+
+.quantity {
+  margin: 5 auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px gray;
+  align-self: center;
+  padding: 8px;
+  border-radius: 10px;
+  width: 60px;
+  background: #e0e0e0;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 6px;
+  font-family: cursive;
+  background: transparent;
+  outline: none;
+  border: none;
+  text-shadow: 2px 1px 2px gray;
+  color: black;
+  font-size: 20px;
+  right: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.clear-cart-button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #efd2d2;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+}
+
+.clear-cart-image {
+  height: 50px;
+}
+
+.clear-cart-button:hover {
+  background: #3e8e41ce;
+}
+
+.clear-cart-button:active {
+  background-color: #3b953e;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+/* Summary Card */
+.summary-text {
+  font-family: "Allerta", sans-serif;
+}
+
+.card {
+  background-color: #e0e0e0 !important;
+  width: 80% !important;
+  margin-bottom: 30px !important;
+  margin: 0 auto !important;
+}
+
+.title {
+  font-size: 40px !important;
+}
+
+.pos {
+  margin-bottom: 12 !important;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 30px !important;
+  }
+
+  .summary-text {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 20px !important;
+  }
+
+  .summary-text {
+    font-size: 10px !important;
+  }
+
+  .clear-cart-button {
+    margin: 10px 10px;
+    padding: 5px;
+  }
+
+  .clear-cart-image {
+    height: 35px;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 20px !important;
+  }
+  .about-button {
+    font-size: 10px;
+  }
+
+  .summary-text {
+    font-size: 10px !important;
+  }
+
+  .clear-cart-button {
+    margin: 10px 10px;
+    padding: 5px;
+  }
+
+  .clear-cart-image {
+    height: 35px;
+  }
+}
+
+/* CHECKOUT */
+.checkout-parent {
+  display: flex;
+  font-family: "PT Sans Narrow", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-container {
+  width: 500px;
+  height: 700px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px gray;
+  border: 1px solid rgba(121, 104, 104, 0.287);
+  padding: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+.shipping-address {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.checkout-form input {
+  font-size: 16px;
+  padding: 5px;
+  margin: 10px;
+  justify-content: space-around;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 550px) {
+  .checkout-form input {
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .checkout-btn {
+    margin: 0 auto !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .checkout-btn {
+    font-size: 8px !important;
+  }
+}
+
+/* .. */
+
+/* Order Summary */
+.place-order-parent {
+  display: flex;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.place-order-container {
+  width: 500px;
+  margin: 0 auto;
+  height: 1100px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px gray;
+  border: 1px solid rgba(121, 104, 104, 0.287);
+  padding: 20px;
+}
+
+.place-order-container p {
+  font-size: 20px;
+}
+
+.place-order-container > h1 {
+  border-bottom: 2px solid #481444;
+}
+
+.items-container {
+  box-shadow: 2px 2px 2px gray;
+  margin: 10px;
+}
+
+.item-quantity {
+  text-shadow: 1px 1px 1px rgb(49, 228, 49);
+  color: #2067a5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.left {
+  text-align: left;
+  width: 60%;
+  font-size: 100% !important;
+
+  display: inline-block;
+}
+
+.right {
+  text-align: right;
+  width: 30%;
+  font-size: 100% !important;
+
+  display: inline-block;
+}
+
+.shipping-container {
+  box-shadow: 2px 2px 2px gray;
+  margin: 10px;
+}
+
+.shipping-container > h2 {
+  color: gray;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+  .place-order-container h1 {
+    font-size: 97%;
+  }
+
+  .left {
+    font-size: 90% !important;
+  }
+  .right {
+    font-size: 90% !important;
+  }
+  .shipping-container h2 {
+    font-size: 90% !important;
+  }
+
+  .shipping-container p {
+    font-size: 80% !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .left {
+    font-size: 80% !important;
+  }
+}
+/* .. */
+
+/* PLACE ORDER */
+
+.placeOrder-container {
+  font-family: "PT Sans Narrow", sans-serif;
+  box-shadow: 1px 2px 2px gray;
+  padding: 10px;
+  margin: 10px;
+}
+
+.placeOrder-container > p {
+  font-size: 100%;
+}
+
+.dont-worry {
+  color: gray;
+}
+
+.thankyou {
+  color: green;
+  padding: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 850px) {
+  .thankyou {
+    font-size: 100%;
+  }
+
+  .dont-worry {
+    font-size: 110%;
+  }
+  .placeOrder-container > p {
+    font-size: 80%;
+  }
+}
+
+/* .. */
 /* FOOTER */
-
-
 
 /* Footer container */
 
@@ -629,7 +973,6 @@ body {
   width: 100%;
   margin-top: 180px;
 }
-
 
 .footer {
   color: black;
@@ -701,10 +1044,13 @@ body {
   color: #ec4961;
 }
 
-
+.copyright {
+  font-size: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: gray;
+}
 
 /* MEDIA QUERIES */
-
 
 @media (max-width: 700px) {
   .footer-container {
@@ -723,21 +1069,18 @@ body {
   }
 }
 
-
 @media (max-width: 500px) {
   .footer-para {
     font-size: 20px;
   }
 }
 
-
-
 @media (max-width: 350px) {
   .footer-para {
     font-size: 15px !important;
   }
 
-  .my-name{
+  .my-name {
     font-size: 15px !important;
   }
 
@@ -750,6 +1093,3 @@ body {
     font-size: 1.3em;
   }
 }
-
-
-

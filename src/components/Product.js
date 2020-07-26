@@ -1,21 +1,15 @@
 import React from "react";
 import Shoes from "../shoes.json";
 import "../App.css";
-import { Link } from "react-router-dom";
+import Shoe from "./Shoe";
 
 function Product() {
   return (
     <div>
       <div className="product-container">
-        {Object.keys(Shoes).map((keyName) => {
+        {Object.keys(Shoes).map((keyName, idx) => {
           const shoe = Shoes[keyName];
-          return (
-            <Link  className="hvr-grow products" key={keyName} to={`/product/${keyName}`}>
-              <img className='products-shoe-image' alt="Shoe" src={shoe.img}  />
-              <h3 className="shoe-name">{shoe.name}</h3>
-              <h2 className="shoe-price"> {shoe.price} </h2>
-            </Link>
-          );
+          return <Shoe shoe={shoe} key={idx} keyName={keyName} idx={idx} />;
         })}
       </div>
       <div className="page-wrapper"></div>
