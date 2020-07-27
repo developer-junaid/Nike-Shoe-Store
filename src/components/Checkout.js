@@ -43,7 +43,6 @@ function Checkout() {
           name="checkout-form"
           className="checkout-form"
           onSubmit={handleSubmit(onSubmit)}
-          netlify
         >
           <br />
           <fieldset>
