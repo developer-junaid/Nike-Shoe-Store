@@ -39,7 +39,12 @@ function Checkout() {
       <div className="checkout-container">
         <h1>Checkout</h1>
 
-        <form className="checkout-form" onSubmit={handleSubmit(onSubmit)}>
+        <form
+          name="checkout-form"
+          className="checkout-form"
+          onSubmit={handleSubmit(onSubmit)}
+          netlify
+        >
           <br />
           <fieldset>
             <legend className="shipping-address">User Info</legend>
@@ -106,18 +111,32 @@ function Checkout() {
             />
             <br />
             <br />
-            <FormControlLabel 
+            <FormControlLabel
               disabled
               control={<Checkbox checked name="payment_method" />}
-              label={<span style={{ fontSize: '0.7rem' }}>Payment is Cash on Delivery only</span>}
+              label={
+                <span style={{ fontSize: "0.7rem" }}>
+                  Payment is Cash on Delivery only
+                </span>
+              }
             />
             <br />
             <Link to="/cart">
-              <Button className='checkout-btn' variant="contained" type="button" color="primary">
+              <Button
+                className="checkout-btn"
+                variant="contained"
+                type="button"
+                color="primary"
+              >
                 Back
               </Button>
             </Link>
-            <Button variant="contained" className='checkout-btn' type="submit" color="primary">
+            <Button
+              variant="contained"
+              className="checkout-btn"
+              type="submit"
+              color="primary"
+            >
               Submit and proceed
             </Button>
           </fieldset>
