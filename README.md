@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=EDyGLYiLBus&feature=youtu.be
 <img src='/images/NikeSite.png'/>
 
 
-http://nike-shoe-store.surge.sh/
+https://nike-shoe-store.netlify.app/
 
 ## Features
 
