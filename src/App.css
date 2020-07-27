@@ -5,7 +5,7 @@
 }
 
 body {
-  background:white;
+  background: linear-gradient(-90deg, gray, white);
   height: 100vh;
 }
 
@@ -262,10 +262,8 @@ body {
   .home-products {
     width: 200px;
     height: 150px;
-  font-size: 70%;
+    font-size: 70%;
   }
-
-  
 
   .tagline {
     font-size: 50px;
