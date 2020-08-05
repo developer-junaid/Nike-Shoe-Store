@@ -50,6 +50,7 @@ function Checkout() {
             <input
               type="text"
               name="first_name"
+              autoFocus
               ref={register}
               required
               placeholder="First Name"
