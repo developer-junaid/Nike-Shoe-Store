@@ -12,7 +12,7 @@ https://youtu.be/s-lAXVxqSZg
 <img src='/images/NikeSite.png'/>
 
 
-### link : https://nike-shoe-store.netlify.app/
+### :link:link : https://nike-shoe-store.netlify.app/
 
 
 ## Features
