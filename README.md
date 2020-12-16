@@ -5,14 +5,15 @@
 
 
 # Video
-https://www.youtube.com/watch?v=EDyGLYiLBus&feature=youtu.be
+https://youtu.be/s-lAXVxqSZg
 
 
 # HOMEPAGE
 <img src='/images/NikeSite.png'/>
 
 
-https://nike-shoe-store.netlify.app/
+### link : https://nike-shoe-store.netlify.app/
+
 
 ## Features
 
