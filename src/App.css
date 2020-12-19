@@ -1,7 +1,11 @@
 * {
   margin: 0;
-  padding: 0 4px;
   box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
 }
 
 body {
@@ -13,6 +17,8 @@ body {
 .container {
   font-family: "Merienda One", cursive;
   width: 100%;
+  min-height: 100vh;
+  position: relative;
   text-align: center;
 }
 
@@ -992,26 +998,28 @@ fieldset {
 /* Footer container */
 
 /* FOOTER */
-.footer-container {
-  width: 100%;
-  margin-top: 180px;
+
+.wrapper {
+  height: 40vh;
 }
 
 .footer {
-  color: white;
-
-  height: 100px;
-  position: relative;
+  width: 100%;
+  border-top: 1px solid black;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .footer-content {
-  height: 100px;
   display: flex;
 }
 
 .footer .footer-content .footer-section {
   flex: 1;
-  padding: 25px;
 }
 
 .footer .footer-content h1 {
