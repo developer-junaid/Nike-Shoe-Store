@@ -67,11 +67,13 @@ body {
 
 .nav-container {
   display: flex;
+
   background: #e0d9e7c5;
   border-radius: 30px;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 20px;
+  margin: 0.5rem;
   box-shadow: 1px 1px 4px gray;
 }
 
@@ -84,10 +86,9 @@ body {
 }
 
 .logo {
-  height: 100px;
+  height: 60px;
   position: absolute;
-  left: 50px;
-  top: 67px;
+  left: 30px;
 }
 
 .active {
@@ -152,6 +153,7 @@ body {
   background-position: center;
   height: 100vh;
   border-radius: 20px;
+  margin: 1rem;
   box-shadow: 10px 10px 10px rgba(14, 12, 12, 0.534);
 }
 
