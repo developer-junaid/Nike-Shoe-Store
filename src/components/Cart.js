@@ -129,6 +129,7 @@ function Cart() {
               );
             } else {
               store.dispatch(remove(product));
+              return null;
             }
           })}
       </div>

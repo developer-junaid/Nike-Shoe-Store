@@ -1,17 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import NikeImage from "../images/nike.svg";
 import cartImage2 from "../images/cart7.svg";
 import Badge from "@material-ui/core/Badge";
-import { CartContext } from "../CartContext";
 import { useSelector } from "react-redux";
 import { selectTotalItems } from "./../store";
 
 function Nav() {
-  // Use Context
-  const [cart, setCart] = useContext(CartContext);
-
   // Use state
   const [homeState, setHomeState] = useState(
     "hvr-underline-from-center nav-link active"
@@ -59,10 +55,6 @@ function Nav() {
     setCartState("hvr-underline-from-center nav-link active");
   };
 
-  // Get Cart Total
-  const getCartTotal = () => {
-    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
-  };
   // Total
   let totalItems = useSelector(selectTotalItems);
 

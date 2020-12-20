@@ -11,26 +11,12 @@ function OrderSummary() {
   // Use Context
   const [ShippingState, setShippingState] = useContext(ShippingContext);
   const [cart, setCart] = useContext(CartContext);
-  const totalPrice = cart.reduce(
-    (total, curr, { quantity }) => total + curr.price * curr.quantity,
-    0
-  );
-  const total = Number(totalPrice).toFixed(2);
-
-  // Get Cart Total
-  const getCartTotal = () => {
-    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
-  };
-
-  // Total
-  const totalItems = getCartTotal();
 
   // Shipping state
   const {
     first_name,
     last_name,
     address,
-    email,
     city,
     state,
     country,
