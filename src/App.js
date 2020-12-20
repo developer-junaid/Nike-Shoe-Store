@@ -3,13 +3,17 @@ import RouterFunction from "./Router";
 import Footer from "./components/Footer";
 import "./App.css";
 import { CartProvider } from "./CartContext";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 function App() {
   return (
-    <div className={'container'}>
+    <div className={"container"}>
       <CartProvider>
-        <RouterFunction />
-        <Footer />
+        <Provider store={store}>
+          <RouterFunction />
+          <Footer />
+        </Provider>
       </CartProvider>
     </div>
   );

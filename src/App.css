@@ -1,7 +1,11 @@
 * {
   margin: 0;
-  padding: 0 4px;
   box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
 }
 
 body {
@@ -13,6 +17,8 @@ body {
 .container {
   font-family: "Merienda One", cursive;
   width: 100%;
+  min-height: 100vh;
+  position: relative;
   text-align: center;
 }
 
@@ -61,11 +67,13 @@ body {
 
 .nav-container {
   display: flex;
+
   background: #e0d9e7c5;
   border-radius: 30px;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 20px;
+  margin: 0.5rem;
   box-shadow: 1px 1px 4px gray;
 }
 
@@ -78,10 +86,9 @@ body {
 }
 
 .logo {
-  height: 100px;
+  height: 60px;
   position: absolute;
-  left: 50px;
-  top: 67px;
+  left: 30px;
 }
 
 .active {
@@ -146,6 +153,7 @@ body {
   background-position: center;
   height: 100vh;
   border-radius: 20px;
+  margin: 1rem;
   box-shadow: 10px 10px 10px rgba(14, 12, 12, 0.534);
 }
 
@@ -313,8 +321,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px gray;
+  margin: 1rem;
 }
 
 .about-nike {
@@ -512,7 +521,7 @@ body {
   border: 1px solid rgba(128, 128, 128, 0.24);
   border-radius: 20px;
   padding: 10px 20px;
-  box-shadow: 8px 8px 8px #481444;
+  box-shadow: 3px 3px 7px #363236;
   width: 350px;
   height: 300px;
 }
@@ -632,6 +641,19 @@ body {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+}
+.products-section {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.item-button {
+  padding: 0.3rem;
+  width: 2rem;
+  font-size: 1.2rem;
+  margin: 0.1rem;
+  cursor: pointer;
 }
 
 .cart-products {
@@ -807,12 +829,19 @@ body {
 }
 
 .checkout-container {
-  width: 500px;
-  height: 700px;
+  margin-top: 2rem;
+  background-color: #e0e0e060 !important;
+  width: 600px;
+  height: 600px;
   border-radius: 20px;
   box-shadow: 6px 6px 10px gray;
   border: 1px solid rgba(121, 104, 104, 0.287);
   padding: 20px;
+}
+
+.MuiButton-containedPrimary {
+  margin: 1rem !important;
+  width: 40% !important;
 }
 
 fieldset {
@@ -828,6 +857,7 @@ fieldset {
 .checkout-form input {
   font-size: 16px;
   padding: 10px;
+  width: 40%;
   margin: 10px;
   border-radius: 10px;
   justify-content: space-around;
@@ -866,17 +896,24 @@ fieldset {
 }
 
 .place-order-container {
-  width: 500px;
-  margin: 0 auto;
-  height: 1100px;
+  width: 600px;
+  margin: 2rem auto;
+  background-color: #e0e0e0c9 !important;
+  min-height: 70vh;
   border-radius: 20px;
   box-shadow: -6px -6px 10px rgb(133, 116, 116);
   border: 1px solid rgba(121, 104, 104, 0.287);
   padding: 20px;
 }
 
+.card {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  width: 800px !important;
+}
+
 .place-order-container p {
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .place-order-container > h1 {
@@ -884,8 +921,13 @@ fieldset {
 }
 
 .items-container {
-  box-shadow: 2px 2px 2px rgb(0, 19, 128);
+  box-shadow: 2px 2px 2px rgb(79, 80, 87);
   margin: 15px 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
   padding: 3px;
 }
 
@@ -913,8 +955,11 @@ fieldset {
 }
 
 .shipping-container {
-  box-shadow: 4px 4px 4px rgb(0, 19, 128);
+  box-shadow: 4px 4px 4px rgb(56, 56, 59);
   margin: 10px;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: rgb(226, 214, 214);
 }
 
 .shipping-container > h2 {
@@ -954,9 +999,12 @@ fieldset {
 
 .placeOrder-container {
   font-family: "PT Sans Narrow", sans-serif;
-  box-shadow: 1px 2px 2px rgb(0, 19, 128);
+  box-shadow: 1px 2px 2px rgb(29, 29, 31);
   padding: 10px;
-  margin: 10px;
+  margin: 1rem auto;
+  width: 70%;
+  background-color: rgb(226, 214, 214);
+  border-radius: 20px;
 }
 
 .placeOrder-container > p {
@@ -992,26 +1040,28 @@ fieldset {
 /* Footer container */
 
 /* FOOTER */
-.footer-container {
-  width: 100%;
-  margin-top: 180px;
+
+.wrapper {
+  height: 40vh;
 }
 
 .footer {
-  color: white;
-
-  height: 100px;
-  position: relative;
+  width: 100%;
+  border-top: 1px solid black;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .footer-content {
-  height: 100px;
   display: flex;
 }
 
 .footer .footer-content .footer-section {
   flex: 1;
-  padding: 25px;
 }
 
 .footer .footer-content h1 {
@@ -1054,8 +1104,8 @@ fieldset {
 }
 
 .footer .footer-content .about .socials a:hover {
-  color: rgb(30, 30, 150);
-  border: 1px solid white;
+  color: #6b196b;
+  border: 1px solid black;
   transition: all 0.3s;
 }
 

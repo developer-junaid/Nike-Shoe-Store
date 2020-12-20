@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Shoes from "../shoes2.json";
+import Shoes from "../latestShoes.json";
 
 function Home() {
   return (

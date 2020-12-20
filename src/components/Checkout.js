@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "../App.css";
 import { useForm } from "react-hook-form";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -17,17 +17,6 @@ function Checkout() {
 
   // Handle Submit
   const onSubmit = (data) => {
-    const {
-      first_name,
-      last_name,
-      address,
-      email,
-      city,
-      state,
-      country,
-      zip_code,
-    } = data;
-
     setShippingContext(data);
     history.push("/ordersummary");
   };
