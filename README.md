@@ -35,5 +35,9 @@ https://youtu.be/s-lAXVxqSZg
 - Javascript ES6
 - React js
 - Material UI
-- Surge
+- Redux
+- React-Redux
+- Redux-Toolkit
+- Context API
+- Netlify
 - Github Actions
