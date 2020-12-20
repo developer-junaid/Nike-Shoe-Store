@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import { ShippingContext, CartContext } from "../CartContext";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-
+import { useSelector } from "react-redux";
+import { selectTotalAmount } from "../store";
 
 function OrderSummary() {
+  let totalAmount = useSelector(selectTotalAmount);
+
   // Use Context
   const [ShippingState, setShippingState] = useContext(ShippingContext);
   const [cart, setCart] = useContext(CartContext);
@@ -22,9 +25,17 @@ function OrderSummary() {
   // Total
   const totalItems = getCartTotal();
 
- 
   // Shipping state
-  const { first_name, last_name,  address,  email, city,  state, country, zip_code} = ShippingState;
+  const {
+    first_name,
+    last_name,
+    address,
+    email,
+    city,
+    state,
+    country,
+    zip_code,
+  } = ShippingState;
   return (
     <div className="place-order-parent">
       <div className="place-order-container">
@@ -67,7 +78,7 @@ function OrderSummary() {
           <p className="left">Total</p>
 
           <p className="right">
-            <strong>${total}</strong>
+            <strong>${totalAmount}</strong>
           </p>
           <br />
           <br />
@@ -78,26 +89,31 @@ function OrderSummary() {
         <div className="shipping-container">
           <h2>( Shipping Details )</h2>
           <br />
-          <p>{first_name} {last_name}</p>
+          <p>
+            {first_name} {last_name}
+          </p>
           <br />
-          <p>{address}, {city}, {state}, {zip_code}, {country} </p>
+          <p>
+            {address}, {city}, {state}, {zip_code}, {country}{" "}
+          </p>
           <br />
           <p>Payment: "Cash On Delivery"</p>
           <br />
         </div>
 
-          {/* Buttons */}
-          <br/><br/>
-          <Link to="/checkout">
-              <Button variant="contained" type="button" color="primary">
-                Back
-              </Button>
-            </Link>
-            <Link to="/placeorder">
-              <Button variant="contained"  type="button" color="primary">
-                Place Order
-              </Button>
-            </Link>
+        {/* Buttons */}
+        <br />
+        <br />
+        <Link to="/checkout">
+          <Button variant="contained" type="button" color="primary">
+            Back
+          </Button>
+        </Link>
+        <Link to="/placeorder">
+          <Button variant="contained" type="button" color="primary">
+            Place Order
+          </Button>
+        </Link>
       </div>
     </div>
   );
