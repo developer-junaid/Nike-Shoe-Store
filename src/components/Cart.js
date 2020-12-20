@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import SummaryCard from "./SummaryCard";
 import clearCartImage from "../images/empty-cart.svg";
@@ -11,25 +11,47 @@ import {
   selectProducts,
   selectTotalItems,
   setTotalItems,
+  selectTotalAmount,
+  setTotalAmount,
 } from "../store";
 
 import "./cart.css";
 
 function Cart() {
   // const total = Number(totalPrice).toFixed(2);
+  let [totalPrice, setTotalPrice] = useState(0);
 
   // Get total Items from store
   let totalItems = useSelector(selectTotalItems);
+  // Get total Amount from store
+  let totalAmount = useSelector(selectTotalAmount);
   // Get products from store
   const products = useSelector(selectProducts);
   // Filter Cart products
   const cartProducts = products.filter((product) => product.added);
-  // total Items
+  // Set total Items
   store.dispatch(setTotalItems(cartProducts.length));
+
+  // Calculate Total Amount
+  let sum = cartProducts
+    .map((product) => {
+      let price = product.price;
+      let quantity = product.quantity;
+      let total = price * quantity;
+      return total;
+    })
+    .reduce((acc, curr) => {
+      return acc + curr;
+    }, 0);
+
+  // Use Effect
+  useEffect(() => {
+    store.dispatch(setTotalAmount(sum));
+  }, [sum]);
 
   return (
     <div>
-      <SummaryCard items={totalItems} amount={5} />
+      <SummaryCard items={totalItems} amount={totalAmount} />
       {/* Empty Cart button */}
       {cartProducts.length > 0 && (
         <div>

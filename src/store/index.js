@@ -11,8 +11,10 @@ const store = configureStore({
 export const selectProducts = (state) => state.cart;
 // Select Variable totalItems
 export const selectTotalItems = (state) => state.variables.totalItems;
+// Select Variable totalAmount
+export const selectTotalAmount = (state) => state.variables.totalAmount;
 
 // Export stuff
-export const { setTotalItems } = variablesSlice.actions;
+export const { setTotalItems, setTotalAmount } = variablesSlice.actions;
 export const { add, remove, emptyCart } = productSlice.actions;
 export { productSlice, variablesSlice, store };

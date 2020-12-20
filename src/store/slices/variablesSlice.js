@@ -11,6 +11,10 @@ const variablesSlice = createSlice({
     setTotalItems: (state, action) => {
       state.totalItems = action.payload;
     },
+    // Set Total Amount
+    setTotalAmount: (state, action) => {
+      state.totalAmount = action.payload;
+    },
   },
 });
 
