@@ -4,12 +4,15 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Tooltip from "@material-ui/core/Tooltip";
 import cartImage from "../images/cart1.svg";
-import { store, add } from "../store";
+import { store, add, selectProducts, setTotalItems } from "../store";
 
 function Product() {
   // Select Data from redux store
-  const products = useSelector((state) => state);
-  console.log(products);
+  const products = useSelector(selectProducts);
+
+  const cartProducts = products.filter((product) => product.added);
+
+  store.dispatch(setTotalItems(cartProducts.length));
 
   return (
     <div>

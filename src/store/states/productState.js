@@ -1,4 +1,4 @@
-const INITIAL_STATE = [
+const productState = [
   {
     id: "shoe1",
     title: "Flex Experience Run 9",
@@ -45,4 +45,4 @@ const INITIAL_STATE = [
   },
 ];
 
-export { INITIAL_STATE };
+export { productState };

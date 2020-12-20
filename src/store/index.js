@@ -1,50 +1,18 @@
-import { createSlice, configureStore } from "@reduxjs/toolkit";
-import { INITIAL_STATE } from "./state";
-
-// Create Slice
-const basketSlice = createSlice({
-  name: "basket",
-  initialState: INITIAL_STATE,
-  reducers: {
-    // Actions
-    // Add
-    add: (state, action) => {
-      return state.map((item) => {
-        // Find the item
-        if (item.id !== action.payload.id) {
-          return item;
-        }
-
-        // Add it to the cart
-        return {
-          ...item,
-          added: true,
-          quantity: item.quantity + 1,
-        };
-      });
-    },
-    // Remove
-    remove: (state, action) => {
-      return state.map((item) => {
-        // Find the item
-        if (item.id !== action.payload.id) {
-          return item;
-        }
-
-        // Remove it from the cart
-        return {
-          ...item,
-          added: false,
-          quantity: item.quantity * 0,
-        };
-      });
-    },
-  },
-});
+import { configureStore } from "@reduxjs/toolkit";
+import productSlice from "./slices/productSlice";
+import variablesSlice from "./slices/variablesSlice";
 
 // Configure Store
-const store = configureStore({ reducer: basketSlice.reducer });
+const store = configureStore({
+  reducer: { cart: productSlice.reducer, variables: variablesSlice.reducer },
+});
+
+// Select Products
+export const selectProducts = (state) => state.cart;
+// Select Variable totalItems
+export const selectTotalItems = (state) => state.variables.totalItems;
 
 // Export stuff
-export const { add, remove } = basketSlice.actions;
-export { basketSlice, store };
+export const { setTotalItems } = variablesSlice.actions;
+export const { add, remove, emptyCart } = productSlice.actions;
+export { productSlice, variablesSlice, store };
