@@ -45,7 +45,7 @@ function Cart() {
 
   // Use Effect
   useEffect(() => {
-    store.dispatch(setTotalAmount(sum));
+    store.dispatch(setTotalAmount(Number(sum).toFixed(2)));
   }, [sum]);
 
   return (
@@ -102,6 +102,12 @@ function Cart() {
                   <br />
                   <h2 className="shoe-price-cart"> ${price} </h2>
                   <label htmlFor="quantity">Items</label>{" "}
+                  <button
+                    className="item-button"
+                    onClick={() => store.dispatch(decrementProduct(product))}
+                  >
+                    -
+                  </button>
                   <input
                     readOnly
                     className="quantity"
@@ -115,12 +121,6 @@ function Cart() {
                     onClick={() => store.dispatch(incrementProduct(product))}
                   >
                     +
-                  </button>
-                  <button
-                    className="item-button"
-                    onClick={() => store.dispatch(decrementProduct(product))}
-                  >
-                    -
                   </button>
                   <br />
                   <img className="cart-shoe-image" alt={title} src={imageUrl} />
