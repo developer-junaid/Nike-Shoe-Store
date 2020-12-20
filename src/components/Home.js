@@ -1,5 +1,5 @@
 import React from "react";
-import Shoes from "../shoes2.json";
+import Shoes from "../latestShoes.json";
 
 function Home() {
   return (

@@ -913,7 +913,7 @@ fieldset {
 }
 
 .place-order-container p {
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .place-order-container > h1 {
@@ -921,8 +921,13 @@ fieldset {
 }
 
 .items-container {
-  box-shadow: 2px 2px 2px rgb(0, 19, 128);
+  box-shadow: 2px 2px 2px rgb(79, 80, 87);
   margin: 15px 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
   padding: 3px;
 }
 

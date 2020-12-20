@@ -2,24 +2,20 @@
   "shoe1": {
     "name": "Flex Experience Run 9",
     "img": "https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg",
-    "img2": "https://m.media-amazon.com/images/I/61FxQSqEpOL._AC_SR700,525_.jpg",
     "price": 65.0
   },
   "shoe2": {
     "name": "Flex Control 4",
     "img": "https://m.media-amazon.com/images/I/71Cc3JcCN7L._AC_SR700,525_.jpg",
-    "img2": "https://m.media-amazon.com/images/I/717eNWShX9L._AC_SR700,525_.jpg",
     "price": 65.0
   },
   "shoe3": {
     "name": "Air Max Motion 2",
     "img": "https://m.media-amazon.com/images/I/61IPQlMjDkL._AC_SR700,525_.jpg",
-    "img2": "https://m.media-amazon.com/images/I/71ZH5cjP+oL._AC_SR700,525_.jpg",
     "price": 84.95
   },
   "shoe4": {
     "name": "Phantom GT Club DF FG/MG",
-    "img2": "https://m.media-amazon.com/images/I/71caHEigvFL._AC_SR700,525_.jpg",
     "img": "https://m.media-amazon.com/images/I/81kz-cAPItL._AC_SR700,525_.jpg",
     "price": 65.0
   }

@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
-import { ShippingContext, CartContext } from "../CartContext";
+import { ShippingContext } from "../CartContext";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { useSelector } from "react-redux";
-import { selectTotalAmount } from "../store";
+import { selectTotalAmount, selectProducts } from "../store";
 
 function OrderSummary() {
+  const products = useSelector(selectProducts);
+  const cartProducts = products.filter((product) => product.added);
   let totalAmount = useSelector(selectTotalAmount);
 
   // Use Context
   const [ShippingState, setShippingState] = useContext(ShippingContext);
-  const [cart, setCart] = useContext(CartContext);
 
   // Shipping state
   const {
@@ -22,6 +23,7 @@ function OrderSummary() {
     country,
     zip_code,
   } = ShippingState;
+
   return (
     <div className="place-order-parent">
       <div className="place-order-container">
@@ -30,20 +32,28 @@ function OrderSummary() {
 
         {/* Items */}
 
-        {cart.map((item, idx) => (
-          <div key={idx} className="items-container">
-            <p className="left">
-              {idx + 1}.&nbsp; {item.name}(
-              <span className="item-quantity">{item.quantity}</span>)
-            </p>
+        {cartProducts.map((product, index) => {
+          // Variables
+          let id = product.id;
+          let name = product.title;
+          let price = product.price;
+          let quantity = product.quantity;
 
-            <p className="right">
-              <strong>${item.price}</strong>
-            </p>
-            <br />
-            <br />
-          </div>
-        ))}
+          return (
+            <div key={id} className="items-container">
+              <p className="left">
+                {index + 1}.&nbsp; {name}(
+                <span className="item-quantity">{quantity}</span>)
+              </p>
+
+              <p className="right">
+                <strong>${price}</strong>
+              </p>
+              <br />
+              <br />
+            </div>
+          );
+        })}
 
         {/* Delivery */}
         <>
