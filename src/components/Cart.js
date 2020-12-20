@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../App.css";
 import SummaryCard from "./SummaryCard";
 import clearCartImage from "../images/empty-cart.svg";
@@ -13,13 +13,12 @@ import {
   setTotalItems,
   selectTotalAmount,
   setTotalAmount,
+  incrementProduct,
+  decrementProduct,
 } from "../store";
-
-import "./cart.css";
 
 function Cart() {
   // const total = Number(totalPrice).toFixed(2);
-  let [totalPrice, setTotalPrice] = useState(0);
 
   // Get total Items from store
   let totalItems = useSelector(selectTotalItems);
@@ -83,37 +82,54 @@ function Cart() {
             let price = product.price;
             let quantity = product.quantity;
 
-            return (
-              <div key={id} className="cart-products">
-                <h3 className="cart-shoe-name">{title} </h3>
-                <button
-                  className="remove-btn hvr-grow"
-                  onClick={() => store.dispatch(remove(product))}
-                >
-                  {" "}
-                  <img
-                    src={crossImage}
-                    height={30}
-                    alt="Remove"
-                    title="Remove"
-                  />{" "}
-                </button>
-                <br />
-                <h2 className="shoe-price-cart"> ${price} </h2>
-                <label htmlFor="quantity">Items</label>{" "}
-                <input
-                  className="quantity"
-                  maxLength="3"
-                  type="number"
-                  id="quantity"
-                  value={quantity}
-                  // onChange={(e) => setQuantity(item, parseInt(e.target.value))} - Change Quantity
-                />
-                <br />
-                <img className="cart-shoe-image" alt={title} src={imageUrl} />
-                <br />
-              </div>
-            );
+            // If Quantity is > 0
+            if (quantity > 0) {
+              return (
+                <div key={id} className="cart-products">
+                  <h3 className="cart-shoe-name">{title} </h3>
+                  <button
+                    className="remove-btn hvr-grow"
+                    onClick={() => store.dispatch(remove(product))}
+                  >
+                    {" "}
+                    <img
+                      src={crossImage}
+                      height={30}
+                      alt="Remove"
+                      title="Remove"
+                    />{" "}
+                  </button>
+                  <br />
+                  <h2 className="shoe-price-cart"> ${price} </h2>
+                  <label htmlFor="quantity">Items</label>{" "}
+                  <input
+                    readOnly
+                    className="quantity"
+                    maxLength="3"
+                    type="text"
+                    id="quantity"
+                    value={quantity}
+                  />
+                  <button
+                    className="item-button"
+                    onClick={() => store.dispatch(incrementProduct(product))}
+                  >
+                    +
+                  </button>
+                  <button
+                    className="item-button"
+                    onClick={() => store.dispatch(decrementProduct(product))}
+                  >
+                    -
+                  </button>
+                  <br />
+                  <img className="cart-shoe-image" alt={title} src={imageUrl} />
+                  <br />
+                </div>
+              );
+            } else {
+              store.dispatch(remove(product));
+            }
           })}
       </div>
     </div>

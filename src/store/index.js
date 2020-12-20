@@ -16,5 +16,11 @@ export const selectTotalAmount = (state) => state.variables.totalAmount;
 
 // Export stuff
 export const { setTotalItems, setTotalAmount } = variablesSlice.actions;
-export const { add, remove, emptyCart } = productSlice.actions;
+export const {
+  add,
+  remove,
+  emptyCart,
+  incrementProduct,
+  decrementProduct,
+} = productSlice.actions;
 export { productSlice, variablesSlice, store };

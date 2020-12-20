@@ -641,6 +641,17 @@ body {
   text-align: center;
   justify-content: center;
 }
+.products-section {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.item-button {
+  padding: 0.2rem;
+  margin: 0.1rem;
+  cursor: pointer;
+}
 
 .cart-products {
   display: inline-block;

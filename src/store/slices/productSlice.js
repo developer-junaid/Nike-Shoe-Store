@@ -49,6 +49,39 @@ const productSlice = createSlice({
         };
       });
     },
+    // Increment Product
+    incrementProduct: (state, action) => {
+      // Increment logic
+      return state.map((item) => {
+        // Find the item
+        if (item.id !== action.payload.id) {
+          return item;
+        }
+
+        // Add it to the cart
+        return {
+          ...item,
+          quantity: item.quantity + 1,
+        };
+      });
+    },
+
+    // Decrement Product
+    decrementProduct: (state, action) => {
+      // Decrement logic
+      return state.map((item) => {
+        // Find the item
+        if (item.id !== action.payload.id) {
+          return item;
+        }
+
+        // Add it to the cart
+        return {
+          ...item,
+          quantity: item.quantity - 1,
+        };
+      });
+    },
   },
 });
 
