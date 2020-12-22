@@ -22,6 +22,7 @@ https://youtu.be/s-lAXVxqSZg
 - Delete products from cart
 - Form Validation
 - Accessibility Optimized
+- Mobile Responsive
 
 ## Run Locally 
 
