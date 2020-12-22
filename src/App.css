@@ -832,7 +832,7 @@ body {
   margin-top: 2rem;
   background-color: #e0e0e060 !important;
   width: 600px;
-  height: 600px;
+  min-height: 600px;
   border-radius: 20px;
   box-shadow: 6px 6px 10px gray;
   border: 1px solid rgba(121, 104, 104, 0.287);
@@ -867,23 +867,25 @@ fieldset {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 600px) {
+  .checkout-container {
+    width: 90%;
+    padding: 20px;
+  }
+  /* .checkout-btn {
+    width: 80% !important;
+  } */
+  .MuiButton-containedPrimary {
+    width: 80% !important;
+  }
+}
+
 @media (max-width: 550px) {
   .checkout-form input {
     display: block;
     margin: 15px auto;
-  }
-}
-
-@media (max-width: 420px) {
-  .checkout-btn {
-    margin: 0 auto !important;
-    font-size: 10px !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .checkout-btn {
-    font-size: 8px !important;
+    text-align: center;
+    width: 80% !important;
   }
 }
 
@@ -909,7 +911,7 @@ fieldset {
 .card {
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
-  width: 800px !important;
+  width: 80% !important;
 }
 
 .place-order-container p {
@@ -969,6 +971,10 @@ fieldset {
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
+  .place-order-container {
+    width: 90% !important;
+  }
+
   .place-order-container h1 {
     font-size: 97%;
   }

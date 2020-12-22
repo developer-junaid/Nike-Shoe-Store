@@ -101,12 +101,22 @@ function OrderSummary() {
         <br />
         <br />
         <Link to="/checkout">
-          <Button variant="contained" type="button" color="primary">
+          <Button
+            variant="contained"
+            className="checkout-btn"
+            type="button"
+            color="primary"
+          >
             Back
           </Button>
         </Link>
         <Link to="/placeorder">
-          <Button variant="contained" type="button" color="primary">
+          <Button
+            variant="contained"
+            className="checkout-btn"
+            type="button"
+            color="primary"
+          >
             Place Order
           </Button>
         </Link>
