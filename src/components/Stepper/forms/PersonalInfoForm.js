@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../../../App.css";
 import Button from "@material-ui/core/Button";
+import { ShippingContext } from "../../../CartContext";
 
 // Component
 const PersonalInfoForm = ({ handleNext }) => {
+  const [ShippingState, setShippingContext] = useContext(ShippingContext);
+
   return (
     <Formik
       initialValues={{ firstName: "", lastName: "", email: "" }}
@@ -29,42 +32,47 @@ const PersonalInfoForm = ({ handleNext }) => {
         // To Give The Feel of an API
         setTimeout(() => {
           console.log(JSON.stringify(values, null, 2));
+          setShippingContext(values);
+
           handleNext();
         }, 400);
       }}
     >
       {({ errors, touched }) => (
-        <Form className="checkout-form" autoComplete="off">
-          {/* <label htmlFor="firstName">First Name </label> */}
-          <Field name="firstName" type="text" placeholder="First Name" />
-          <ErrorMessage name="firstName">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <Field name="lastName" type="text" placeholder="Last Name" />
-          <ErrorMessage name="lastName">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <br />
-          <Field
-            name="email"
-            type="text"
-            placeholder="Email"
-            style={{ width: "84%" }}
-          />
-          <ErrorMessage name="email">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <br />
-          <Button
-            variant="contained"
-            className="checkout-btn"
-            type="submit"
-            color="primary"
-          >
-            Submit
-          </Button>
-          {/* <button type="submit"></button> */}
-        </Form>
+        <div className="checkout-parent ">
+          <div className="checkout-container">
+            <h2>Personal Info</h2>
+            <Form className="checkout-form">
+              <label htmlFor="firstName">First Name </label>
+              <Field name="firstName" type="text" />
+              <ErrorMessage name="firstName">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <label htmlFor="lastName">Last Name </label>
+              <Field name="lastName" type="text" />
+              <ErrorMessage name="lastName">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <label htmlFor="email">Email </label>
+              <Field name="email" type="text" />
+              <ErrorMessage name="email">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <Button
+                variant="contained"
+                className="checkout-btn"
+                style={{ width: "100%" }}
+                type="submit"
+                color="primary"
+              >
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </div>
       )}
     </Formik>
   );

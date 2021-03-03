@@ -1,25 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../../../App.css";
 import Button from "@material-ui/core/Button";
+import { ShippingContext } from "../../../CartContext";
 
 // AddressForm
 const AddressForm = ({ handleNext }) => {
+  const [ShippingState, setShippingContext] = useContext(ShippingContext);
+
   return (
     <Formik
       initialValues={{
         address: "",
         city: "",
         state: "",
-        zipCode: 0,
+        zipCode: "",
         country: "",
       }}
       validationSchema={Yup.object({
         //
         // Validate address
         address: Yup.string()
-          .max(40, "Must be 40 characters or less")
+          .max(60, "Must be 60 characters or less")
           .required("required"),
 
         // Validate city
@@ -51,48 +54,67 @@ const AddressForm = ({ handleNext }) => {
         // To Give The Feel of an API
         setTimeout(() => {
           console.log(JSON.stringify(values, null, 2));
+          setShippingContext({ ...ShippingState, ...values });
           handleNext();
         }, 400);
       }}
     >
       {({ errors, touched }) => (
-        <Form className="checkout-form" autoComplete="off">
-          <Field name="country" type="text" placeholder="Country" />
-          <ErrorMessage name="country">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <Field name="city" type="text" placeholder="City" />
-          <ErrorMessage name="city">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <Field name="state" type="text" placeholder="State/Province/Region" />
-          <ErrorMessage name="state">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <Field name="zipCode" type="text" placeholder="Zip Code" />
-          <ErrorMessage name="zipCode">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <br />
-          <Field
-            name="address"
-            type="text"
-            placeholder="Address"
-            style={{ width: "84%" }}
-          />
-          <ErrorMessage name="address">
-            {(msg) => <div style={{ color: "red" }}>{msg}</div>}
-          </ErrorMessage>
-          <br />
-          <Button
-            variant="contained"
-            className="checkout-btn"
-            type="submit"
-            color="primary"
-          >
-            Submit
-          </Button>
-        </Form>
+        <div className="checkout-parent ">
+          <div className="checkout-container">
+            <h2>Address Info</h2>
+
+            <Form className="checkout-form">
+              <label htmlFor="country">Country </label>
+              <Field name="country" type="text" />
+              <ErrorMessage name="country">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <label htmlFor="city">City </label>
+              <Field name="city" type="text" />
+              <ErrorMessage name="city">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <label htmlFor="state">State/Province/Region </label>
+              <Field name="state" type="text" />
+              <ErrorMessage name="state">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <label htmlFor="zipCode">Zip Code </label>
+              <Field name="zipCode" type="number" />
+              <ErrorMessage name="zipCode">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <label htmlFor="address">Address </label>
+              <Field name="address" type="text" />
+              <ErrorMessage name="address">
+                {(msg) => <div style={{ color: "red" }}>{msg}</div>}
+              </ErrorMessage>
+              <br />
+              <Button
+                variant="contained"
+                className="checkout-btn"
+                type="button"
+                color="primary"
+                onClick={() => {}}
+              >
+                Go Back
+              </Button>
+              <Button
+                variant="contained"
+                className="checkout-btn"
+                type="submit"
+                color="primary"
+              >
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </div>
       )}
     </Formik>
   );

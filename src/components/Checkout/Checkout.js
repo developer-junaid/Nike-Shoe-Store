@@ -25,113 +25,113 @@ function Checkout() {
   // ...
 
   return (
-    <div className="checkout-parent ">
-      <div className="checkout-container">
-        <Stepper />
+    <Stepper />
+    // <div className="checkout-parent ">
+    //   <div className="checkout-container">
 
-        {/* <form
-          name="checkout-form"
-          className="checkout-form"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <br />
-          <fieldset>
-            <input
-              type="text"
-              name="first_name"
-              autoFocus
-              ref={register}
-              required
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              name="last_name"
-              ref={register}
-              required
-              placeholder="Last Name"
-            />
-            <input
-              type="text"
-              name="address"
-              ref={register}
-              required
-              placeholder="Address"
-            />
-            <input
-              type="email"
-              name="email"
-              ref={register}
-              required
-              placeholder="Email"
-            />
-            <input
-              type="text"
-              name="city"
-              ref={register}
-              required
-              placeholder="City"
-            />
-            <input
-              type="text"
-              name="state"
-              ref={register}
-              required
-              placeholder="State/Province/Region"
-              size="100%"
-            />
-            <input
-              type="number"
-              name="zip_code"
-              maxLength={5}
-              size={5}
-              max="99999"
-              min="00001"
-              ref={register}
-              required
-              placeholder="Zip Code"
-            />
-            <input
-              type="text"
-              name="country"
-              ref={register}
-              required
-              placeholder="Country"
-            />
-            <br />
-            <br />
-            <FormControlLabel
-              disabled
-              control={<Checkbox checked name="payment_method" />}
-              label={
-                <span style={{ fontSize: "0.7rem" }}>
-                  Payment is Cash on Delivery only
-                </span>
-              }
-            />
-            <br />
-            <Link to="/cart">
-              <Button
-                className="checkout-btn"
-                variant="contained"
-                type="button"
-                color="primary"
-              >
-                Back
-              </Button>
-            </Link>
-            <Button
-              variant="contained"
-              className="checkout-btn"
-              type="submit"
-              color="primary"
-            >
-              Submit and proceed
-            </Button>
-          </fieldset>
-        </form> */}
-      </div>
-    </div>
+    //     <form
+    //       name="checkout-form"
+    //       className="checkout-form"
+    //       onSubmit={handleSubmit(onSubmit)}
+    //     >
+    //       <br />
+    //       <fieldset>
+    //         <input
+    //           type="text"
+    //           name="first_name"
+    //           autoFocus
+    //           ref={register}
+    //           required
+    //           placeholder="First Name"
+    //         />
+    //         <input
+    //           type="text"
+    //           name="last_name"
+    //           ref={register}
+    //           required
+    //           placeholder="Last Name"
+    //         />
+    //         <input
+    //           type="text"
+    //           name="address"
+    //           ref={register}
+    //           required
+    //           placeholder="Address"
+    //         />
+    //         <input
+    //           type="email"
+    //           name="email"
+    //           ref={register}
+    //           required
+    //           placeholder="Email"
+    //         />
+    //         <input
+    //           type="text"
+    //           name="city"
+    //           ref={register}
+    //           required
+    //           placeholder="City"
+    //         />
+    //         <input
+    //           type="text"
+    //           name="state"
+    //           ref={register}
+    //           required
+    //           placeholder="State/Province/Region"
+    //           size="100%"
+    //         />
+    //         <input
+    //           type="number"
+    //           name="zip_code"
+    //           maxLength={5}
+    //           size={5}
+    //           max="99999"
+    //           min="00001"
+    //           ref={register}
+    //           required
+    //           placeholder="Zip Code"
+    //         />
+    //         <input
+    //           type="text"
+    //           name="country"
+    //           ref={register}
+    //           required
+    //           placeholder="Country"
+    //         />
+    //         <br />
+    //         <br />
+    //         <FormControlLabel
+    //           disabled
+    //           control={<Checkbox checked name="payment_method" />}
+    //           label={
+    //             <span style={{ fontSize: "0.7rem" }}>
+    //               Payment is Cash on Delivery only
+    //             </span>
+    //           }
+    //         />
+    //         <br />
+    //         <Link to="/cart">
+    //           <Button
+    //             className="checkout-btn"
+    //             variant="contained"
+    //             type="button"
+    //             color="primary"
+    //           >
+    //             Back
+    //           </Button>
+    //         </Link>
+    //         <Button
+    //           variant="contained"
+    //           className="checkout-btn"
+    //           type="submit"
+    //           color="primary"
+    //         >
+    //           Submit and proceed
+    //         </Button>
+    //       </fieldset>
+    //     </form>
+    //   </div>
+    // </div>
   );
 }
 

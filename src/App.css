@@ -829,19 +829,35 @@ body {
 }
 
 .checkout-container {
-  margin-top: 2rem;
+  position: relative;
+  text-align: left;
+  margin-top: 1rem;
   background-color: #e0e0e060 !important;
   width: 600px;
-  min-height: 600px;
+  min-height: 400px;
   border-radius: 20px;
   box-shadow: 6px 6px 10px gray;
   border: 1px solid rgba(121, 104, 104, 0.287);
   padding: 20px;
 }
 
+.checkout-container h2 {
+  text-align: center;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
 .MuiButton-containedPrimary {
-  margin: 1rem !important;
-  width: 40% !important;
+  margin: 2rem auto !important;
+  width: 75% !important;
 }
 
 fieldset {
@@ -857,8 +873,7 @@ fieldset {
 .checkout-form input {
   font-size: 16px;
   padding: 10px;
-  width: 40%;
-  margin: 10px;
+  width: 100%;
   border-radius: 10px;
   justify-content: space-around;
   border: none;

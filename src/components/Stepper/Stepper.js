@@ -9,6 +9,9 @@ import PersonalInfoForm from "./forms/PersonalInfoForm";
 import AddressForm from "./forms/AddressForm";
 import PlaceOrderForm from "./forms/PlaceOrderForm";
 import "./stepper.css";
+import PlaceOrder from "../PlaceOrder/PlaceOrder";
+import Home from "../Home/Home";
+import { useHistory } from "react-router-dom";
 
 // Custom Styles
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 // // getStepLabels - To Get Step Labels
 const getStepLabels = () => {
-  return ["Personal Information", "Address", "Place Order"];
+  return ["Personal Information", "Address Information", "Place Order"];
 };
 
 // // GetStepContent - Decide Which Form to show and gets it's data based on StepIndex
@@ -54,6 +57,8 @@ const getStepContent = (stepIndex, handleNext) => {
 
 // Component
 const StepperComponent = () => {
+  let history = useHistory();
+
   const classes = useStyles(); // Use Custom Styles Created
   const [activeStep, setActiveStep] = useState(0); // Set Active Step
   const stepLabels = getStepLabels(); // Get Step Labels
@@ -66,6 +71,7 @@ const StepperComponent = () => {
   // Handle Reset Button
   const handleReset = () => {
     setActiveStep(0);
+    history.push("/");
   };
 
   // Return
@@ -84,10 +90,8 @@ const StepperComponent = () => {
 
         {activeStep === stepLabels.length ? (
           <div>
-            <Typography className={classes.instructions}>
-              All Steps Completed
-            </Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            <PlaceOrder />
+            <Button onClick={handleReset}>Go To Homepage</Button>
           </div>
         ) : (
           <div>

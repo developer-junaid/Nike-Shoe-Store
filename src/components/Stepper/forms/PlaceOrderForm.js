@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { ShippingContext } from "../../../CartContext";
-import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import { Formik, Form } from "formik";
 import "../../../App.css";
 import { useSelector } from "react-redux";
 import { selectTotalAmount, selectProducts } from "../../../store";
@@ -35,12 +33,13 @@ const PlaceOrderForm = ({ handleNext }) => {
         // To Give The Feel of an API
         setTimeout(() => {
           console.log(JSON.stringify(values, null, 2));
+          console.log(ShippingState);
           handleNext();
         }, 400);
       }}
     >
       {({ errors, touched }) => (
-        <Form className="place-order-parent" autoComplete="off">
+        <div className="place-order-parent">
           <div className="place-order-container">
             <h1>Order Summary</h1>
             <br />
@@ -114,31 +113,18 @@ const PlaceOrderForm = ({ handleNext }) => {
 
             {/* Buttons */}
             <br />
-            <br />
-            <Link to="/checkout">
+            <Form autoComplete="off">
               <Button
                 variant="contained"
                 className="checkout-btn"
-                type="button"
-                color="primary"
-              >
-                Back
-              </Button>
-            </Link>
-            <Link to="/placeorder">
-              <Button
-                variant="contained"
-                className="checkout-btn"
-                type="button"
+                type="submit"
                 color="primary"
               >
                 Place Order
               </Button>
-            </Link>
+            </Form>
           </div>
-          <br />
-          <button type="submit">Submit</button>
-        </Form>
+        </div>
       )}
     </Formik>
   );
