@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import cartImage from "../images/cart1.svg";
-import { CartContext } from "../CartContext";
+import { CartContext } from "../../CartContext";
 import Tooltip from "@material-ui/core/Tooltip";
 
 function Shoe({ shoe, keyName }) {

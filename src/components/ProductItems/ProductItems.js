@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Shoes from "../shoes.json";
-import "./../App.css";
+import Shoes from "../../shoes.json";
+import "../../App.css";
 import { Link } from "react-router-dom";
-import BackImage from "../images/back.svg";
+import BackImage from "../../images/back.svg";
 
 function ProductItems() {
   const { id } = useParams();

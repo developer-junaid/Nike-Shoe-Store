@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import "../App.css";
+import "../../App.css";
 import { useForm } from "react-hook-form";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
-import { ShippingContext } from "../CartContext";
+import { ShippingContext } from "../../CartContext";
 import { Link, useHistory } from "react-router-dom";
+import Stepper from "./../Stepper/Stepper";
 
 function Checkout() {
   // Create Shipping Context
@@ -26,16 +27,15 @@ function Checkout() {
   return (
     <div className="checkout-parent ">
       <div className="checkout-container">
-        <h1>Checkout</h1>
+        <Stepper />
 
-        <form
+        {/* <form
           name="checkout-form"
           className="checkout-form"
           onSubmit={handleSubmit(onSubmit)}
         >
           <br />
           <fieldset>
-            <legend className="shipping-address">User Info</legend>
             <input
               type="text"
               name="first_name"
@@ -129,7 +129,7 @@ function Checkout() {
               Submit and proceed
             </Button>
           </fieldset>
-        </form>
+        </form> */}
       </div>
     </div>
   );

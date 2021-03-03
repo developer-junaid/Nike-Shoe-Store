@@ -1,10 +1,10 @@
 import React from "react";
-import "../App.css";
+import "../../App.css";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Tooltip from "@material-ui/core/Tooltip";
-import cartImage from "../images/cart1.svg";
-import { store, add, selectProducts, setTotalItems } from "../store";
+import cartImage from "../../images/cart1.svg";
+import { store, add, selectProducts, setTotalItems } from "../../store";
 
 function Product() {
   // Select Data from redux store
