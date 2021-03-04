@@ -10,7 +10,6 @@ import AddressForm from "./forms/AddressForm";
 import PlaceOrderForm from "./forms/PlaceOrderForm";
 import "./stepper.css";
 import PlaceOrder from "../PlaceOrder/PlaceOrder";
-import Home from "../Home/Home";
 import { useHistory } from "react-router-dom";
 
 // Custom Styles
@@ -77,7 +76,11 @@ const StepperComponent = () => {
   // Return
   return (
     <div className={classes.root}>
-      <Stepper activeStep={activeStep} alternativeLabel>
+      <Stepper
+        activeStep={activeStep}
+        alternativeLabel
+        style={{ width: "85%", margin: "1rem auto" }}
+      >
         {stepLabels.map((label) => (
           //Return
           <Step key={label}>

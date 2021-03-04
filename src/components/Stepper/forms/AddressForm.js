@@ -53,7 +53,7 @@ const AddressForm = ({ handleNext }) => {
       onSubmit={(values) => {
         // To Give The Feel of an API
         setTimeout(() => {
-          console.log(JSON.stringify(values, null, 2));
+          // console.log(JSON.stringify(values, null, 2));
           setShippingContext({ ...ShippingState, ...values });
           handleNext();
         }, 400);
@@ -95,15 +95,7 @@ const AddressForm = ({ handleNext }) => {
                 {(msg) => <div style={{ color: "red" }}>{msg}</div>}
               </ErrorMessage>
               <br />
-              <Button
-                variant="contained"
-                className="checkout-btn"
-                type="button"
-                color="primary"
-                onClick={() => {}}
-              >
-                Go Back
-              </Button>
+
               <Button
                 variant="contained"
                 className="checkout-btn"

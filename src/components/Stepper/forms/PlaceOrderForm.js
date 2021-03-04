@@ -5,11 +5,15 @@ import { Formik, Form } from "formik";
 import "../../../App.css";
 import { useSelector } from "react-redux";
 import { selectTotalAmount, selectProducts } from "../../../store";
+import { CartContext } from "../../../CartContext";
+import { setTotalItems, store, emptyCart } from "../../../store";
 
 // AddressForm
 const PlaceOrderForm = ({ handleNext }) => {
   const products = useSelector(selectProducts);
   const cartProducts = products.filter((product) => product.added);
+  const [cart, setCart] = useContext(CartContext);
+
   let totalAmount = useSelector(selectTotalAmount);
 
   // Use Context
@@ -32,8 +36,12 @@ const PlaceOrderForm = ({ handleNext }) => {
       onSubmit={(values) => {
         // To Give The Feel of an API
         setTimeout(() => {
-          console.log(JSON.stringify(values, null, 2));
-          console.log(ShippingState);
+          // console.log(JSON.stringify(values, null, 2));
+          // console.log(ShippingState);
+          setCart([]);
+          // Set total Items
+          store.dispatch(emptyCart(products));
+          store.dispatch(setTotalItems(0));
           handleNext();
         }, 400);
       }}

@@ -31,7 +31,7 @@ const PersonalInfoForm = ({ handleNext }) => {
       onSubmit={(values) => {
         // To Give The Feel of an API
         setTimeout(() => {
-          console.log(JSON.stringify(values, null, 2));
+          // console.log(JSON.stringify(values, null, 2));
           setShippingContext(values);
 
           handleNext();
