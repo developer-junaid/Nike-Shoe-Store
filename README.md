@@ -40,5 +40,7 @@ https://youtu.be/vhnFcb4cf7I
 - React-Redux
 - Redux-Toolkit
 - Context API
+- Formik
+- Yup
 - Netlify
 - Github Actions
