@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import "../App.css";
-import { CartContext } from "../CartContext";
+import "../../App.css";
+import { CartContext } from "../../CartContext";
 
 function PlaceOrder() {
   const [cart, setCart] = useContext(CartContext);

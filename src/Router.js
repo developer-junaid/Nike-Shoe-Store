@@ -1,15 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
-import Product from "./components/Product";
-import ProductItems from "./components/ProductItems";
-import About from "./components/About";
-import Nav from "./components/Nav";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
-import OrderSummary from "./components/OrderSummary";
-import PlaceOrder from "./components/PlaceOrder";
-
+import Home from "./components/Home/Home";
+import Product from "./components/Product/Product";
+import ProductItems from "./components/ProductItems/ProductItems";
+import About from "./components/About/About";
+import Nav from "./components/Nav/Nav";
+import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
+import OrderSummary from "./components/OrderSummary/OrderSummary";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
 
 function RouterFunction() {
   return (

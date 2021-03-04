@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
-import NikeImage from "../images/nike.svg";
-import cartImage2 from "../images/cart7.svg";
+import "../../App.css";
+import NikeImage from "../../images/nike.svg";
+import cartImage2 from "../../images/cart7.svg";
 import Badge from "@material-ui/core/Badge";
 import { useSelector } from "react-redux";
-import { selectTotalItems } from "./../store";
+import { selectTotalItems } from "../../store";
 
 function Nav() {
   // Use state

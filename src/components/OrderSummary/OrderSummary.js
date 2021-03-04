@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { ShippingContext } from "../CartContext";
+import { ShippingContext } from "../../CartContext";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { useSelector } from "react-redux";
-import { selectTotalAmount, selectProducts } from "../store";
+import { selectTotalAmount, selectProducts } from "../../store";
 
 function OrderSummary() {
   const products = useSelector(selectProducts);

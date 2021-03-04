@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "../App.css";
-import SummaryCard from "./SummaryCard";
-import clearCartImage from "../images/empty-cart.svg";
-import crossImage from "../images/cross3.svg";
+import "../../App.css";
+import SummaryCard from "../SummaryCard/SummaryCard";
+import clearCartImage from "../../images/empty-cart.svg";
+import crossImage from "../../images/cross3.svg";
 import { useSelector } from "react-redux";
 import {
   store,
@@ -15,7 +15,7 @@ import {
   setTotalAmount,
   incrementProduct,
   decrementProduct,
-} from "../store";
+} from "../../store";
 
 function Cart() {
   // const total = Number(totalPrice).toFixed(2);

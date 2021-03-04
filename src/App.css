@@ -829,19 +829,35 @@ body {
 }
 
 .checkout-container {
-  margin-top: 2rem;
+  position: relative;
+  text-align: left;
+  margin-top: 1rem;
   background-color: #e0e0e060 !important;
   width: 600px;
-  min-height: 600px;
+  min-height: 400px;
   border-radius: 20px;
   box-shadow: 6px 6px 10px gray;
   border: 1px solid rgba(121, 104, 104, 0.287);
   padding: 20px;
 }
 
+.checkout-container h2 {
+  text-align: center;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
 .MuiButton-containedPrimary {
-  margin: 1rem !important;
-  width: 40% !important;
+  margin: 2rem auto !important;
+  width: 75% !important;
 }
 
 fieldset {
@@ -857,8 +873,7 @@ fieldset {
 .checkout-form input {
   font-size: 16px;
   padding: 10px;
-  width: 40%;
-  margin: 10px;
+  width: 100%;
   border-radius: 10px;
   justify-content: space-around;
   border: none;
@@ -1077,7 +1092,7 @@ fieldset {
 .footer-para {
   margin: 10px 0;
   font-variant: small-caps;
-  font-size: x-large;
+  font-size: large;
   color: #17161850;
   text-shadow: 0px 0px 1px black;
 }
@@ -1090,19 +1105,18 @@ fieldset {
 .footer .footer-content .about .contact span {
   display: block;
   margin-bottom: 8px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .footer .footer-content .about .socials a {
   border: 1px solid gray;
-  width: 45px;
-  height: 42px;
-  padding-top: 5px;
-  margin-right: 5px;
-  margin-bottom: 20px;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.7rem;
+  margin-bottom: 1rem;
   text-align: center;
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #706060;
   border-radius: 5px;
@@ -1124,7 +1138,7 @@ fieldset {
 }
 
 .copyright {
-  font-size: 20px;
+  font-size: 1rem;
   font-family: "PT Sans Narrow", sans-serif;
   color: rgb(31, 20, 20);
 }
