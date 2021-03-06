@@ -22,3 +22,9 @@
   z-index: 1;
   top: 5px;
 }
+
+.stepper {
+  font-family: sans-serif;
+  width: 85%;
+  margin: 1rem auto;
+}

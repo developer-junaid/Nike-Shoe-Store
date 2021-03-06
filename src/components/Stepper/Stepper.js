@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepLabel from "@material-ui/core/StepLabel";
+import Stepper from "react-stepper-horizontal";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import PersonalInfoForm from "./forms/PersonalInfoForm";
@@ -76,18 +74,16 @@ const StepperComponent = () => {
   // Return
   return (
     <div className={classes.root}>
-      <Stepper
-        activeStep={activeStep}
-        alternativeLabel
-        style={{ width: "85%", margin: "1rem auto" }}
-      >
-        {stepLabels.map((label) => (
-          //Return
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
+      <div className="stepper">
+        <Stepper
+          steps={[
+            { title: "Personal Information" },
+            { title: "Address Information" },
+            { title: "Place Order" },
+          ]}
+          activeStep={activeStep}
+        />
+      </div>
       <div>
         {/* If steps are completed or not */}
 
