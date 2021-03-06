@@ -42,5 +42,6 @@ https://youtu.be/vhnFcb4cf7I
 - Context API
 - Formik
 - Yup
+- react-horizontal-stepper (for stepper)
 - Netlify
 - Github Actions
