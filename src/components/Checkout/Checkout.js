@@ -1,9 +1,9 @@
 import React from "react";
 import "../../App.css";
-import Stepper from "./../Stepper/Stepper";
+import StepperComponent from "./../Stepper/Stepper";
 
 function Checkout() {
-  return <Stepper />;
+  return <StepperComponent />;
 }
 
 export default Checkout;
